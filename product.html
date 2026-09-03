@@ -249,28 +249,87 @@ function updateGallery() {
 
 let startX = 0;
 let startY = 0;
-
-let isDragging = false;
-
-
-galleryTrack.addEventListener(
-    "touchstart",
-    (event) => {
-
-        const touch =
-            event.touches[0];
-
-        startX = touch.clientX;
-        startY = touch.clientY;
-
-        isDragging = true;
-
-    },
-    { passive: true }
-);
+let isTouching = false;
 
 
-galleryTrack.addEventListener(
+galleryTrack.addEventListener("touchstart", function (event) {
+
+    const touch = event.touches[0];
+
+    startX = touch.clientX;
+    startY = touch.clientY;
+
+    isTouching = true;
+
+}, { passive: true });
+
+
+galleryTrack.addEventListener("touchend", function (event) {
+
+    if (!isTouching) {
+        return;
+    }
+
+    isTouching = false;
+
+    const touch = event.changedTouches[0];
+
+    const endX = touch.clientX;
+    const endY = touch.clientY;
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+
+    /*
+    Alleen een duidelijke
+    horizontale swipe accepteren.
+    */
+
+    if (Math.abs(deltaX) < 40) {
+        return;
+    }
+
+    if (Math.abs(deltaX) <= Math.abs(deltaY)) {
+        return;
+    }
+
+
+    /*
+    Swipe naar links:
+    volgende foto
+    */
+
+    if (deltaX < 0) {
+
+        if (currentSlide < product.images.length - 1) {
+
+            currentSlide = currentSlide + 1;
+
+            updateGallery();
+        }
+
+        return;
+    }
+
+
+    /*
+    Swipe naar rechts:
+    vorige foto
+    */
+
+    if (deltaX > 0) {
+
+        if (currentSlide > 0) {
+
+            currentSlide = currentSlide - 1;
+
+            updateGallery();
+        }
+
+    }
+
+}, { passive: true });
     "touchend",
     (event) => {
 
