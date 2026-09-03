@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Product</title>
+    <title>Showroom</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,7 @@
         </a>
 
         <nav>
-            <a href="index.html">Shop</a>
+            <a href="index.html">Showroom</a>
             <a href="leverinfo.html">Leverinfo</a>
             <a href="productinfo.html">Productinfo</a>
         </nav>
@@ -76,10 +76,6 @@
                 Productomschrijving.
             </p>
 
-            <button class="buy-button">
-                BESTELLEN
-            </button>
-
         </div>
 
     </section>
@@ -89,225 +85,230 @@
 
 <script>
 
-    /*
-    ========================================
-    PRODUCTEN
-    ========================================
-    */
+const products = {
 
-    const products = {
+    1: {
+        name: "Product 1",
+        price: "€49",
+        description: "Korte omschrijving van product 1.",
+        images: [
+            "images/product-01/1.jpg",
+            "images/product-01/2.jpg",
+            "images/product-01/3.jpg",
+            "images/product-01/4.jpg"
+        ]
+    },
 
-        1: {
-            name: "Product 1",
-            price: "€49",
-            description: "Korte omschrijving van product 1.",
-            images: [
-                "images/product-01/1.jpg",
-                "images/product-01/2.jpg",
-                "images/product-01/3.jpg",
-                "images/product-01/4.jpg"
-            ]
-        },
+    2: {
+        name: "Product 2",
+        price: "€79",
+        description: "Korte omschrijving van product 2.",
+        images: [
+            "images/product-02/1.jpg",
+            "images/product-02/2.jpg",
+            "images/product-02/3.jpg"
+        ]
+    },
 
-        2: {
-            name: "Product 2",
-            price: "€79",
-            description: "Korte omschrijving van product 2.",
-            images: [
-                "images/product-02/1.jpg",
-                "images/product-02/2.jpg",
-                "images/product-02/3.jpg"
-            ]
-        },
+    3: {
+        name: "Product 3",
+        price: "€59",
+        description: "Korte omschrijving van product 3.",
+        images: [
+            "images/product-03/1.jpg",
+            "images/product-03/2.jpg"
+        ]
+    },
 
-        3: {
-            name: "Product 3",
-            price: "€59",
-            description: "Korte omschrijving van product 3.",
-            images: [
-                "images/product-03/1.jpg",
-                "images/product-03/2.jpg"
-            ]
-        },
-
-        4: {
-            name: "Product 4",
-            price: "€89",
-            description: "Korte omschrijving van product 4.",
-            images: [
-                "images/product-04/1.jpg",
-                "images/product-04/2.jpg"
-            ]
-        }
-
-    };
-
-
-    /*
-    ========================================
-    PRODUCT UIT URL HALEN
-    ========================================
-    */
-
-    const params = new URLSearchParams(window.location.search);
-
-    const productId = params.get("id") || "1";
-
-    const product = products[productId];
-
-
-    /*
-    ========================================
-    PRODUCT TONEN
-    ========================================
-    */
-
-    if (product) {
-
-        document.getElementById("productName").textContent =
-            product.name;
-
-        document.getElementById("productPrice").textContent =
-            product.price;
-
-        document.getElementById("productDescription").textContent =
-            product.description;
-
+    4: {
+        name: "Product 4",
+        price: "€89",
+        description: "Korte omschrijving van product 4.",
+        images: [
+            "images/product-04/1.jpg",
+            "images/product-04/2.jpg"
+        ]
     }
 
-
-    /*
-    ========================================
-    GALERIJ
-    ========================================
-    */
-
-    const galleryTrack =
-        document.getElementById("galleryTrack");
-
-    const galleryDots =
-        document.getElementById("galleryDots");
+};
 
 
-    /*
-    Placeholder als foto's nog niet bestaan
-    */
+/* =========================
+   PRODUCT SELECTEREN
+   ========================= */
 
-    if (product) {
+const params = new URLSearchParams(window.location.search);
 
-        product.images.forEach((image, index) => {
+const productId = params.get("id") || "1";
 
-            const slide =
-                document.createElement("div");
-
-            slide.className = "gallery-slide";
-
-            slide.innerHTML = `
-                <img
-                    src="${image}"
-                    alt="${product.name} - foto ${index + 1}"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');"
-                >
-            `;
-
-            galleryTrack.appendChild(slide);
+const product = products[productId] || products[1];
 
 
-            const dot =
-                document.createElement("button");
+/* =========================
+   PRODUCT INFORMATIE
+   ========================= */
 
-            dot.className = "gallery-dot";
+document.getElementById("productName").textContent =
+    product.name;
 
-            if (index === 0) {
-                dot.classList.add("active");
-            }
+document.getElementById("productPrice").textContent =
+    product.price;
 
-            dot.addEventListener("click", () => {
+document.getElementById("productDescription").textContent =
+    product.description;
 
-                currentSlide = index;
 
-                updateGallery();
+/* =========================
+   GALERIJ
+   ========================= */
 
-            });
+const galleryTrack =
+    document.getElementById("galleryTrack");
 
-            galleryDots.appendChild(dot);
+const galleryDots =
+    document.getElementById("galleryDots");
 
-        });
+let currentSlide = 0;
 
+
+/* Foto's maken */
+
+product.images.forEach((image, index) => {
+
+    const slide = document.createElement("div");
+
+    slide.className = "gallery-slide";
+
+    const img = document.createElement("img");
+
+    img.src = image;
+
+    img.alt =
+        `${product.name} - foto ${index + 1}`;
+
+    img.draggable = false;
+
+    slide.appendChild(img);
+
+    galleryTrack.appendChild(slide);
+
+
+    /* Bolletje */
+
+    const dot =
+        document.createElement("button");
+
+    dot.className = "gallery-dot";
+
+    if (index === 0) {
+        dot.classList.add("active");
     }
 
+    dot.addEventListener("click", () => {
 
-    /*
-    ========================================
-    SWIPE
-    ========================================
-    */
+        currentSlide = index;
 
-    let currentSlide = 0;
+        updateGallery();
 
-    let touchStartX = 0;
-    let touchEndX = 0;
+    });
 
+    galleryDots.appendChild(dot);
 
-    function updateGallery() {
-
-        galleryTrack.style.transform =
-            `translateX(-${currentSlide * 100}%)`;
+});
 
 
-        const dots =
-            document.querySelectorAll(".gallery-dot");
+/* =========================
+   GALERIJ UPDATE
+   ========================= */
+
+function updateGallery() {
+
+    galleryTrack.style.transform =
+        `translate3d(-${currentSlide * 100}%, 0, 0)`;
 
 
-        dots.forEach((dot, index) => {
-
-            dot.classList.toggle(
-                "active",
-                index === currentSlide
-            );
-
-        });
-
-    }
+    const dots =
+        document.querySelectorAll(".gallery-dot");
 
 
-    galleryTrack.addEventListener(
-        "touchstart",
-        (event) => {
+    dots.forEach((dot, index) => {
 
-            touchStartX =
-                event.changedTouches[0].screenX;
+        dot.classList.toggle(
+            "active",
+            index === currentSlide
+        );
 
-        },
-        { passive: true }
-    );
+    });
 
-
-    galleryTrack.addEventListener(
-        "touchend",
-        (event) => {
-
-            touchEndX =
-                event.changedTouches[0].screenX;
-
-            handleSwipe();
-
-        },
-        { passive: true }
-    );
+}
 
 
-    function handleSwipe() {
+/* =========================
+   SWIPE
+   ========================= */
 
-        const difference =
-            touchStartX - touchEndX;
+let startX = 0;
+let startY = 0;
+
+let isDragging = false;
+
+
+galleryTrack.addEventListener(
+    "touchstart",
+    (event) => {
+
+        const touch =
+            event.touches[0];
+
+        startX = touch.clientX;
+        startY = touch.clientY;
+
+        isDragging = true;
+
+    },
+    { passive: true }
+);
+
+
+galleryTrack.addEventListener(
+    "touchend",
+    (event) => {
+
+        if (!isDragging) return;
+
+        isDragging = false;
+
+
+        const touch =
+            event.changedTouches[0];
+
+        const endX = touch.clientX;
+        const endY = touch.clientY;
+
+
+        const deltaX =
+            endX - startX;
+
+        const deltaY =
+            endY - startY;
 
 
         /*
-        Swipe naar links
+        Alleen horizontale
+        beweging accepteren.
         */
 
-        if (difference > 50) {
+        if (
+            Math.abs(deltaX) < 50 ||
+            Math.abs(deltaX) < Math.abs(deltaY)
+        ) {
+            return;
+        }
+
+
+        /* Naar volgende foto */
+
+        if (deltaX < 0) {
 
             if (
                 currentSlide <
@@ -323,11 +324,9 @@
         }
 
 
-        /*
-        Swipe naar rechts
-        */
+        /* Naar vorige foto */
 
-        if (difference < -50) {
+        else {
 
             if (currentSlide > 0) {
 
@@ -339,7 +338,9 @@
 
         }
 
-    }
+    },
+    { passive: true }
+);
 
 </script>
 

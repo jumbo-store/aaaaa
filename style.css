@@ -371,9 +371,11 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    transition: transform 0.45s ease;
+    transition: transform 0.35s ease-out;
 
     touch-action: pan-y;
+
+    will-change: transform;
 }
 
 .gallery-slide {
@@ -396,9 +398,12 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
     display: block;
+
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 
