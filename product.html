@@ -15,9 +15,9 @@
 <header>
     <div class="nav">
 
-        <div class="logo">
+        <a href="index.html" class="logo">
             MERK
-        </div>
+        </a>
 
         <nav>
             <a href="index.html">Shop</a>
@@ -29,7 +29,7 @@
 </header>
 
 
-<main>
+<main class="product-page">
 
     <a href="index.html" class="back">
         ← Terug naar shop
@@ -38,35 +38,42 @@
 
     <section class="product-detail">
 
+        <!-- FOTO GALERIJ -->
+
         <div class="gallery">
 
-            <div class="gallery-main">
-                FOTO
-            </div>
+            <div class="gallery-window">
 
-            <div class="gallery-thumbnails">
+                <div class="gallery-track" id="galleryTrack">
 
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+                    <!-- Foto's worden automatisch toegevoegd -->
+
+                </div>
 
             </div>
+
+
+            <!-- Navigatiebolletjes -->
+
+            <div class="gallery-dots" id="galleryDots"></div>
 
         </div>
 
 
+        <!-- PRODUCT INFORMATIE -->
+
         <div class="product-detail-info">
 
-            <h1>Productnaam</h1>
+            <h1 id="productName">
+                Product
+            </h1>
 
-            <div class="detail-price">
-                €49
+            <div class="detail-price" id="productPrice">
+                €0
             </div>
 
-            <p>
-                Hier komt de uitgebreide informatie
-                over het product.
+            <p id="productDescription">
+                Productomschrijving.
             </p>
 
             <button class="buy-button">
@@ -78,6 +85,263 @@
     </section>
 
 </main>
+
+
+<script>
+
+    /*
+    ========================================
+    PRODUCTEN
+    ========================================
+    */
+
+    const products = {
+
+        1: {
+            name: "Product 1",
+            price: "€49",
+            description: "Korte omschrijving van product 1.",
+            images: [
+                "images/product-01/1.jpg",
+                "images/product-01/2.jpg",
+                "images/product-01/3.jpg",
+                "images/product-01/4.jpg"
+            ]
+        },
+
+        2: {
+            name: "Product 2",
+            price: "€79",
+            description: "Korte omschrijving van product 2.",
+            images: [
+                "images/product-02/1.jpg",
+                "images/product-02/2.jpg",
+                "images/product-02/3.jpg"
+            ]
+        },
+
+        3: {
+            name: "Product 3",
+            price: "€59",
+            description: "Korte omschrijving van product 3.",
+            images: [
+                "images/product-03/1.jpg",
+                "images/product-03/2.jpg"
+            ]
+        },
+
+        4: {
+            name: "Product 4",
+            price: "€89",
+            description: "Korte omschrijving van product 4.",
+            images: [
+                "images/product-04/1.jpg",
+                "images/product-04/2.jpg"
+            ]
+        }
+
+    };
+
+
+    /*
+    ========================================
+    PRODUCT UIT URL HALEN
+    ========================================
+    */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const productId = params.get("id") || "1";
+
+    const product = products[productId];
+
+
+    /*
+    ========================================
+    PRODUCT TONEN
+    ========================================
+    */
+
+    if (product) {
+
+        document.getElementById("productName").textContent =
+            product.name;
+
+        document.getElementById("productPrice").textContent =
+            product.price;
+
+        document.getElementById("productDescription").textContent =
+            product.description;
+
+    }
+
+
+    /*
+    ========================================
+    GALERIJ
+    ========================================
+    */
+
+    const galleryTrack =
+        document.getElementById("galleryTrack");
+
+    const galleryDots =
+        document.getElementById("galleryDots");
+
+
+    /*
+    Placeholder als foto's nog niet bestaan
+    */
+
+    if (product) {
+
+        product.images.forEach((image, index) => {
+
+            const slide =
+                document.createElement("div");
+
+            slide.className = "gallery-slide";
+
+            slide.innerHTML = `
+                <img
+                    src="${image}"
+                    alt="${product.name} - foto ${index + 1}"
+                    onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');"
+                >
+            `;
+
+            galleryTrack.appendChild(slide);
+
+
+            const dot =
+                document.createElement("button");
+
+            dot.className = "gallery-dot";
+
+            if (index === 0) {
+                dot.classList.add("active");
+            }
+
+            dot.addEventListener("click", () => {
+
+                currentSlide = index;
+
+                updateGallery();
+
+            });
+
+            galleryDots.appendChild(dot);
+
+        });
+
+    }
+
+
+    /*
+    ========================================
+    SWIPE
+    ========================================
+    */
+
+    let currentSlide = 0;
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    function updateGallery() {
+
+        galleryTrack.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+
+        const dots =
+            document.querySelectorAll(".gallery-dot");
+
+
+        dots.forEach((dot, index) => {
+
+            dot.classList.toggle(
+                "active",
+                index === currentSlide
+            );
+
+        });
+
+    }
+
+
+    galleryTrack.addEventListener(
+        "touchstart",
+        (event) => {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+    galleryTrack.addEventListener(
+        "touchend",
+        (event) => {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            handleSwipe();
+
+        },
+        { passive: true }
+    );
+
+
+    function handleSwipe() {
+
+        const difference =
+            touchStartX - touchEndX;
+
+
+        /*
+        Swipe naar links
+        */
+
+        if (difference > 50) {
+
+            if (
+                currentSlide <
+                product.images.length - 1
+            ) {
+
+                currentSlide++;
+
+                updateGallery();
+
+            }
+
+        }
+
+
+        /*
+        Swipe naar rechts
+        */
+
+        if (difference < -50) {
+
+            if (currentSlide > 0) {
+
+                currentSlide--;
+
+                updateGallery();
+
+            }
+
+        }
+
+    }
+
+</script>
 
 </body>
 </html>
