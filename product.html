@@ -106,7 +106,8 @@ const products = {
         images: [
             "images/product-02/1.jpg",
             "images/product-02/2.jpg",
-            "images/product-02/3.jpg"
+            "images/product-02/3.jpg",
+            "images/product-02/4.jpg"
         ]
     },
 
@@ -116,7 +117,9 @@ const products = {
         description: "Korte omschrijving van product 3.",
         images: [
             "images/product-03/1.jpg",
-            "images/product-03/2.jpg"
+            "images/product-03/2.jpg",
+            "images/product-03/3.jpg",
+            "images/product-03/4.jpg"
         ]
     },
 
@@ -126,7 +129,9 @@ const products = {
         description: "Korte omschrijving van product 4.",
         images: [
             "images/product-04/1.jpg",
-            "images/product-04/2.jpg"
+            "images/product-04/2.jpg",
+            "images/product-04/3.jpg",
+            "images/product-04/4.jpg"
         ]
     }
 
@@ -148,11 +153,9 @@ const product = products[productId] || products[1];
    PRODUCT INFORMATIE
    ========================= */
 
-document.getElementById("productName").textContent =
-    product.name;
+document.getElementById("productName").textContent = product.name;
 
-document.getElementById("productPrice").textContent =
-    product.price;
+document.getElementById("productPrice").textContent = product.price;
 
 document.getElementById("productDescription").textContent =
     product.description;
@@ -171,7 +174,9 @@ const galleryDots =
 let currentSlide = 0;
 
 
-/* Foto's maken */
+/* =========================
+   FOTO'S EN BOLLETJES
+   ========================= */
 
 product.images.forEach((image, index) => {
 
@@ -183,8 +188,7 @@ product.images.forEach((image, index) => {
 
     img.src = image;
 
-    img.alt =
-        `${product.name} - foto ${index + 1}`;
+    img.alt = `${product.name} - foto ${index + 1}`;
 
     img.draggable = false;
 
@@ -195,8 +199,9 @@ product.images.forEach((image, index) => {
 
     /* Bolletje */
 
-    const dot =
-        document.createElement("button");
+    const dot = document.createElement("button");
+
+    dot.type = "button";
 
     dot.className = "gallery-dot";
 
@@ -204,7 +209,7 @@ product.images.forEach((image, index) => {
         dot.classList.add("active");
     }
 
-    dot.addEventListener("click", () => {
+    dot.addEventListener("click", function () {
 
         currentSlide = index;
 
@@ -218,7 +223,7 @@ product.images.forEach((image, index) => {
 
 
 /* =========================
-   GALERIJ UPDATE
+   GALERIJ BIJWERKEN
    ========================= */
 
 function updateGallery() {
@@ -228,15 +233,16 @@ function updateGallery() {
 
 
     const dots =
-        document.querySelectorAll(".gallery-dot");
+        galleryDots.querySelectorAll(".gallery-dot");
 
 
-    dots.forEach((dot, index) => {
+    dots.forEach(function (dot, index) {
 
-        dot.classList.toggle(
-            "active",
-            index === currentSlide
-        );
+        if (index === currentSlide) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
 
     });
 
@@ -249,8 +255,9 @@ function updateGallery() {
 
 let startX = 0;
 let startY = 0;
-let isTouching = false;
 
+
+/* Vinger begint */
 
 galleryTrack.addEventListener("touchstart", function (event) {
 
@@ -259,18 +266,12 @@ galleryTrack.addEventListener("touchstart", function (event) {
     startX = touch.clientX;
     startY = touch.clientY;
 
-    isTouching = true;
-
 }, { passive: true });
 
 
+/* Vinger wordt losgelaten */
+
 galleryTrack.addEventListener("touchend", function (event) {
-
-    if (!isTouching) {
-        return;
-    }
-
-    isTouching = false;
 
     const touch = event.changedTouches[0];
 
@@ -282,124 +283,54 @@ galleryTrack.addEventListener("touchend", function (event) {
 
 
     /*
-    Alleen een duidelijke
-    horizontale swipe accepteren.
+    Geen swipe wanneer
+    de beweging voornamelijk verticaal is.
     */
 
     if (Math.abs(deltaX) < 40) {
         return;
     }
 
-    if (Math.abs(deltaX) <= Math.abs(deltaY)) {
+    if (Math.abs(deltaX) < Math.abs(deltaY)) {
         return;
     }
 
 
-    /*
-    Swipe naar links:
-    volgende foto
-    */
+    /* Naar links */
 
     if (deltaX < 0) {
 
         if (currentSlide < product.images.length - 1) {
 
-            currentSlide = currentSlide + 1;
+            currentSlide++;
 
             updateGallery();
+
         }
 
-        return;
     }
 
 
-    /*
-    Swipe naar rechts:
-    vorige foto
-    */
+    /* Naar rechts */
 
-    if (deltaX > 0) {
+    else {
 
         if (currentSlide > 0) {
 
-            currentSlide = currentSlide - 1;
+            currentSlide--;
 
             updateGallery();
+
         }
 
     }
 
-}, { passive: true });
-    "touchend",
-    (event) => {
-
-        if (!isDragging) return;
-
-        isDragging = false;
+});
 
 
-        const touch =
-            event.changedTouches[0];
+/* Startpositie */
 
-        const endX = touch.clientX;
-        const endY = touch.clientY;
-
-
-        const deltaX =
-            endX - startX;
-
-        const deltaY =
-            endY - startY;
-
-
-        /*
-        Alleen horizontale
-        beweging accepteren.
-        */
-
-        if (
-            Math.abs(deltaX) < 50 ||
-            Math.abs(deltaX) < Math.abs(deltaY)
-        ) {
-            return;
-        }
-
-
-        /* Naar volgende foto */
-
-        if (deltaX < 0) {
-
-            if (
-                currentSlide <
-                product.images.length - 1
-            ) {
-
-                currentSlide++;
-
-                updateGallery();
-
-            }
-
-        }
-
-
-        /* Naar vorige foto */
-
-        else {
-
-            if (currentSlide > 0) {
-
-                currentSlide--;
-
-                updateGallery();
-
-            }
-
-        }
-
-    },
-    { passive: true }
-);
+updateGallery();
 
 </script>
 
