@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn website</title>
+
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welkom op mijn website</h1>
-    <p>Dit is mijn nieuwe landingspagina.</p>
+
+<header>
+
+    <div class="nav">
+
+        <div class="logo">
+            MERK
+        </div>
+
+        <nav>
+            <a href="index.html">Shop</a>
+            <a href="leverinfo.html">Leverinfo</a>
+            <a href="productinfo.html">Productinfo</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="products">
+
+
+    <!-- PRODUCT 1 + 2 -->
+
+    <div class="product-row">
+
+        <div class="product-text">
+            <h2>Product 1</h2>
+            <div class="price">€49</div>
+            <p>Korte omschrijving</p>
+        </div>
+
+        <a href="product.html?id=1" class="product-image">
+        </a>
+
+
+        <a href="product.html?id=2" class="product-image">
+        </a>
+
+        <div class="product-text">
+            <h2>Product 2</h2>
+            <div class="price">€79</div>
+            <p>Korte omschrijving</p>
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT 3 + 4 -->
+
+    <div class="product-row">
+
+        <div class="product-text">
+            <h2>Product 3</h2>
+            <div class="price">€59</div>
+            <p>Korte omschrijving</p>
+        </div>
+
+        <a href="product.html?id=3" class="product-image">
+        </a>
+
+
+        <a href="product.html?id=4" class="product-image">
+        </a>
+
+        <div class="product-text">
+            <h2>Product 4</h2>
+            <div class="price">€89</div>
+            <p>Korte omschrijving</p>
+        </div>
+
+    </div>
+
+
+</main>
+
 </body>
 </html>

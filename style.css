@@ -1,0 +1,222 @@
+/* =========================
+   BASIS
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+    padding: 24px 20px;
+    border-bottom: 1px solid #222;
+}
+
+.nav {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffd400;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ffd400;
+}
+
+
+/* =========================
+   PRODUCT GRID
+   ========================= */
+
+.products {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+/* Eén rij = tekst / foto / foto / tekst */
+
+.product-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* =========================
+   PRODUCT TEKST
+   ========================= */
+
+.product-text {
+    padding: 20px;
+}
+
+.product-text h2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.product-text .price {
+    color: #ffd400;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-text p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   PRODUCT FOTO
+   ========================= */
+
+.product-image {
+    aspect-ratio: 1 / 1;
+
+    position: relative;
+
+    border: 1px solid #ffd400;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #111;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-image:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 10px rgba(255, 212, 0, 0.25),
+        0 0 30px rgba(255, 212, 0, 0.08);
+}
+
+
+/* Tijdelijke placeholder */
+
+.product-image::before {
+    content: "FOTO";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #555;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   MOBIEL
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .products {
+        padding: 30px 10px;
+        gap: 45px;
+    }
+
+    .product-row {
+        grid-template-columns:
+            0.9fr
+            1.4fr
+            1.4fr
+            0.9fr;
+
+        gap: 8px;
+    }
+
+    .product-text {
+        padding: 5px;
+    }
+
+    .product-text h2 {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .product-text .price {
+        font-size: 13px;
+    }
+
+    .product-text p {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+}
