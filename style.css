@@ -1590,7 +1590,7 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
         height: 34px;
         min-width: 44px;
         min-height: 34px;
-        border: 1px solid #ffd400;
+        border: 1px solid rgba(255, 212, 0, 0.45);
         background: rgba(255, 212, 0, 0.06);
     }
 
