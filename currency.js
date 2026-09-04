@@ -13,8 +13,8 @@ const supportedCurrencies = {
     AUD: { symbol: "A$", name: "Australian Dollar", decimals: 2 }
 };
 
-const CURRENCY_CACHE_KEY = "currencyRatesECB";
-const CURRENCY_CACHE_TIME_KEY = "currencyRatesECBTime";
+const CURRENCY_CACHE_KEY = "currencyRatesECB_v2";
+const CURRENCY_CACHE_TIME_KEY = "currencyRatesECBTime_v2";
 const CURRENCY_CACHE_TTL = 6 * 60 * 60 * 1000;
 
 let currencyRates = { EUR: 1 };
@@ -30,37 +30,33 @@ function getCurrency() {
 
 function formatCurrency(amountEUR) {
     const currency = supportedCurrencies[selectedCurrency] || supportedCurrencies.EUR;
-    const rate = currencyRates[selectedCurrency] || 1;
+    const rate = Number(currencyRates[selectedCurrency] || 1);
     const amount = Number(amountEUR) * rate;
-    const formatted = amount.toLocaleString(undefined, {
+
+    return currency.symbol + amount.toLocaleString(undefined, {
         minimumFractionDigits: currency.decimals,
         maximumFractionDigits: currency.decimals
     });
-    return currency.symbol + formatted;
 }
 
 function updateCurrencyUI() {
     const currentCurrency = document.getElementById("currentCurrency");
     if (currentCurrency) currentCurrency.textContent = selectedCurrency;
 
-    document.querySelectorAll("[data-product-price]").forEach(function(element) {
-        const id = Number(element.dataset.productPrice);
-        const item = typeof products !== "undefined"
-            ? products.find(function(product) { return product.id === id; })
-            : null;
-        const firstTier = item && item.prices && item.prices[0];
-        if (firstTier) element.textContent = formatCurrency(firstTier.priceEUR);
-    });
+    if (typeof products !== "undefined" && Array.isArray(products)) {
+        document.querySelectorAll("[data-product-price]").forEach(function(element) {
+            const id = Number(element.dataset.productPrice);
+            const item = products.find(function(product) {
+                return Number(product.id) === id;
+            });
+            const firstTier = item && Array.isArray(item.prices) ? item.prices[0] : null;
+            if (firstTier) {
+                element.textContent = formatCurrency(firstTier.priceEUR);
+            }
+        });
+    }
 
     document.dispatchEvent(new CustomEvent("currencyChanged"));
-}
-
-function setCurrency(currency) {
-    if (!supportedCurrencies[currency]) return;
-    selectedCurrency = currency;
-    localStorage.setItem("currency", currency);
-    updateCurrencyUI();
-    closeCurrencyMenu();
 }
 
 function closeCurrencyMenu() {
@@ -75,10 +71,20 @@ function openCurrencyMenu() {
     const menu = document.getElementById("currencyMenu");
     const button = document.getElementById("currencyButton");
     if (!menu || !button) return;
+
     const shouldOpen = !menu.classList.contains("open");
     menu.classList.toggle("open", shouldOpen);
     button.classList.toggle("open", shouldOpen);
     button.setAttribute("aria-expanded", String(shouldOpen));
+}
+
+function setCurrency(currency) {
+    if (!supportedCurrencies[currency]) return;
+
+    selectedCurrency = currency;
+    localStorage.setItem("currency", currency);
+    updateCurrencyUI();
+    closeCurrencyMenu();
 }
 
 async function loadCurrencyRates() {
@@ -87,39 +93,51 @@ async function loadCurrencyRates() {
 
     if (cached && Date.now() - cachedTime < CURRENCY_CACHE_TTL) {
         try {
-            currencyRates = JSON.parse(cached);
-            updateCurrencyUI();
-            return;
-        } catch (error) {}
+            const parsed = JSON.parse(cached);
+            if (parsed && typeof parsed === "object") {
+                currencyRates = { EUR: 1, ...parsed };
+                updateCurrencyUI();
+                return;
+            }
+        } catch (error) {
+            // Ignore invalid cache and fetch again.
+        }
     }
 
     try {
-        const quotes = Object.keys(supportedCurrencies).filter(function(code) {
-            return code !== "EUR";
-        }).join(",");
-
+        /* Frankfurter uses ECB reference rates. */
         const response = await fetch(
-            "https://api.frankfurter.dev/v2/rates?base=EUR&quotes=" + quotes + "&providers=ECB",
+            "https://api.frankfurter.dev/v2/rates?base=EUR&quotes=USD,GBP,CHF,JPY,CNY,CAD,AUD",
             { cache: "no-store" }
         );
 
-        if (!response.ok) throw new Error("Currency request failed");
+        if (!response.ok) throw new Error("Currency request failed: " + response.status);
 
         const data = await response.json();
         const nextRates = { EUR: 1 };
 
-        data.forEach(function(row) {
-            if (row && row.quote && typeof row.rate === "number") {
-                nextRates[row.quote] = row.rate;
-            }
-        });
+        if (Array.isArray(data)) {
+            data.forEach(function(row) {
+                if (row && row.quote && typeof row.rate === "number") {
+                    nextRates[row.quote] = row.rate;
+                }
+            });
+        } else if (data && typeof data === "object") {
+            Object.entries(data).forEach(function(entry) {
+                const code = entry[0];
+                const rate = entry[1];
+                if (code !== "EUR" && typeof rate === "number") {
+                    nextRates[code] = rate;
+                }
+            });
+        }
 
         currencyRates = nextRates;
         localStorage.setItem(CURRENCY_CACHE_KEY, JSON.stringify(currencyRates));
         localStorage.setItem(CURRENCY_CACHE_TIME_KEY, String(Date.now()));
         updateCurrencyUI();
     } catch (error) {
-        /* EUR still works when the network is unavailable. */
+        /* Keep the site usable with cached/previous rates. */
         updateCurrencyUI();
     }
 }
@@ -157,5 +175,6 @@ window.getCurrency = getCurrency;
 window.formatCurrency = formatCurrency;
 window.setCurrency = setCurrency;
 
+/* Initial render, then update again when fresh rates arrive. */
 updateCurrencyUI();
 loadCurrencyRates();

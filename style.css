@@ -801,6 +801,43 @@ background 0.2s ease,
 
 }
 
+.gallery-slide {
+
+    position: relative;
+
+}
+
+.gallery-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(145deg, #111, #080808);
+    color: #444;
+    pointer-events: none;
+}
+
+.gallery-placeholder-product {
+    color: #ffd400;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.gallery-placeholder-photo {
+    color: #333;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.gallery-placeholder[hidden] {
+    display: none;
+}
+
 .gallery-slide img {
 
     width: 100%;
@@ -1499,6 +1536,8 @@ background 0.3s ease,
 
 }
 
+dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
+
 /* =================================
    MOBILE-FIRST INTERACTION FIXES
    ================================= */
@@ -2012,11 +2051,11 @@ nav {
    LOGO - FINAL SIZE
    ================================= */
 .logo img {
-    width: 222px;
-    height: 222px;
-    max-width: 222px;
-    max-height: 222px;
-    flex: 0 0 222px;
+    width: 56px;
+    height: 56px;
+    max-width: 56px;
+    max-height: 56px;
+    flex: 0 0 56px;
     object-fit: contain;
 }
 

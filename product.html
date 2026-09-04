@@ -7,7 +7,7 @@
 
     <title>Product</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
@@ -17,7 +17,8 @@
     <div class="nav">
 
         <a href="index.html" class="logo">
-            MERK
+            <img src="images/logo-elephant.png?v=3" alt="Merk logo">
+            <span>MERK</span>
         </a>
 
         <nav>
@@ -143,9 +144,9 @@
 </main>
 
 
-<script src="products.js"></script>
-<script src="currency.js"></script>
-<script src="language.js"></script>
+<script src="products.js?v=3"></script>
+<script src="currency.js?v=3"></script>
+<script src="language.js?v=3"></script>
 
 <script>
 
@@ -178,8 +179,8 @@ function updateProductDescription() {
 }
 
 function formatProductPrice(amount) {
-    if (typeof formatCurrency === "function") {
-        return formatCurrency(amount);
+    if (typeof window.formatCurrency === "function") {
+        return window.formatCurrency(amount);
     }
     return "€" + Number(amount).toFixed(2);
 }
@@ -235,16 +236,38 @@ function buildGallery() {
     galleryTrack.innerHTML = "";
     galleryDots.innerHTML = "";
 
-    product.images.forEach(function(image, index) {
+    const imageList = Array.isArray(product.images) && product.images.length
+        ? product.images
+        : [null, null, null, null];
+
+    imageList.forEach(function(image, index) {
         const slide = document.createElement("div");
         slide.className = "gallery-slide";
 
+        const placeholder = document.createElement("div");
+        placeholder.className = "gallery-placeholder";
+        placeholder.innerHTML =
+            '<span class="gallery-placeholder-product">' + String(product.id).padStart(2, "0") + '</span>' +
+            '<span class="gallery-placeholder-photo">' + String(index + 1).padStart(2, "0") + '</span>';
+        slide.appendChild(placeholder);
+
         const img = document.createElement("img");
-        img.src = image;
         img.alt = product.name + " - foto " + (index + 1);
+        if (image) {
+            img.src = image;
+        } else {
+            img.remove();
+        }
         img.loading = index === 0 ? "eager" : "lazy";
         img.decoding = "async";
         img.draggable = false;
+        img.addEventListener("load", function() {
+            placeholder.hidden = true;
+            slide.classList.add("has-image");
+        });
+        img.addEventListener("error", function() {
+            img.remove();
+        });
 
         slide.appendChild(img);
         galleryTrack.appendChild(slide);
@@ -261,7 +284,7 @@ function buildGallery() {
 
 function goToSlide(index) {
     if (index < 0) index = 0;
-    if (index >= product.images.length) index = product.images.length - 1;
+    if (index >= product.images.length) index = galleryTrack.querySelectorAll(".gallery-slide").length - 1;
     currentSlide = index;
 
     galleryTrack.scrollTo({
@@ -281,7 +304,7 @@ function updateDots() {
 
 function updateArrows() {
     previousButton.disabled = currentSlide === 0;
-    nextButton.disabled = currentSlide === product.images.length - 1;
+    nextButton.disabled = currentSlide === galleryTrack.querySelectorAll(".gallery-slide").length - 1;
 }
 
 previousButton.addEventListener("click", function() {
