@@ -15,6 +15,38 @@ const translations = {
         fromLabel: "Vanaf",
         perUnitLabel: "per",
 
+        /* EENHEDEN */
+        unitTranslations: {
+            gram: {
+                singular: "Gram",
+                plural: "Gram"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Liter",
+                plural: "Liter"
+            },
+            kilogram: {
+                singular: "Kilogram",
+                plural: "Kilogram"
+            },
+            pill: {
+                singular: "Pil",
+                plural: "Pillen"
+            },
+            piece: {
+                singular: "Stuk",
+                plural: "Stuks"
+            },
+            unit: {
+                singular: "Eenheid",
+                plural: "Eenheden"
+            }
+        },
+
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -78,6 +110,38 @@ const translations = {
         priceListTitle: "Price list",
         fromLabel: "From",
         perUnitLabel: "per",
+
+        /* UNITS */
+        unitTranslations: {
+            gram: {
+                singular: "Gram",
+                plural: "Grams"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Liter",
+                plural: "Liters"
+            },
+            kilogram: {
+                singular: "Kilogram",
+                plural: "Kilograms"
+            },
+            pill: {
+                singular: "Pill",
+                plural: "Pills"
+            },
+            piece: {
+                singular: "Piece",
+                plural: "Pieces"
+            },
+            unit: {
+                singular: "Unit",
+                plural: "Units"
+            }
+        },
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -143,6 +207,38 @@ const translations = {
         fromLabel: "Ab",
         perUnitLabel: "pro",
 
+        /* EINHEITEN */
+        unitTranslations: {
+            gram: {
+                singular: "Gramm",
+                plural: "Gramm"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Liter",
+                plural: "Liter"
+            },
+            kilogram: {
+                singular: "Kilogramm",
+                plural: "Kilogramm"
+            },
+            pill: {
+                singular: "Pille",
+                plural: "Pillen"
+            },
+            piece: {
+                singular: "Stück",
+                plural: "Stücke"
+            },
+            unit: {
+                singular: "Einheit",
+                plural: "Einheiten"
+            }
+        },
+
         showroomEyebrow: "AUSGEWÄHLTE KOLLEKTION",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -206,6 +302,38 @@ const translations = {
         priceListTitle: "Tarifs",
         fromLabel: "À partir de",
         perUnitLabel: "par",
+
+        /* UNITÉS */
+        unitTranslations: {
+            gram: {
+                singular: "Gramme",
+                plural: "Grammes"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Litre",
+                plural: "Litres"
+            },
+            kilogram: {
+                singular: "Kilogramme",
+                plural: "Kilogrammes"
+            },
+            pill: {
+                singular: "Pilule",
+                plural: "Pilules"
+            },
+            piece: {
+                singular: "Pièce",
+                plural: "Pièces"
+            },
+            unit: {
+                singular: "Unité",
+                plural: "Unités"
+            }
+        },
 
         showroomEyebrow: "COLLECTION SÉLECTIONNÉE",
         showroomTitle: "Showroom",
@@ -271,6 +399,38 @@ const translations = {
         fromLabel: "Desde",
         perUnitLabel: "por",
 
+        /* UNIDADES */
+        unitTranslations: {
+            gram: {
+                singular: "Gramo",
+                plural: "Gramos"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Litro",
+                plural: "Litros"
+            },
+            kilogram: {
+                singular: "Kilogramo",
+                plural: "Kilogramos"
+            },
+            pill: {
+                singular: "Pastilla",
+                plural: "Pastillas"
+            },
+            piece: {
+                singular: "Unidad",
+                plural: "Unidades"
+            },
+            unit: {
+                singular: "Unidad",
+                plural: "Unidades"
+            }
+        },
+
         showroomEyebrow: "COLECCIÓN SELECCIONADA",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -334,6 +494,38 @@ const translations = {
         priceListTitle: "Listino prezzi",
         fromLabel: "A partire da",
         perUnitLabel: "per",
+
+        /* UNITÀ */
+        unitTranslations: {
+            gram: {
+                singular: "Grammo",
+                plural: "Grammi"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Litro",
+                plural: "Litri"
+            },
+            kilogram: {
+                singular: "Chilogrammo",
+                plural: "Chilogrammi"
+            },
+            pill: {
+                singular: "Pillola",
+                plural: "Pillole"
+            },
+            piece: {
+                singular: "Pezzo",
+                plural: "Pezzi"
+            },
+            unit: {
+                singular: "Unità",
+                plural: "Unità"
+            }
+        },
 
         showroomEyebrow: "COLLEZIONE SELEZIONATA",
         showroomTitle: "Showroom",
@@ -399,6 +591,38 @@ const translations = {
         fromLabel: "A partir de",
         perUnitLabel: "por",
 
+        /* UNIDADES */
+        unitTranslations: {
+            gram: {
+                singular: "Grama",
+                plural: "Gramas"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "Litro",
+                plural: "Litros"
+            },
+            kilogram: {
+                singular: "Quilograma",
+                plural: "Quilogramas"
+            },
+            pill: {
+                singular: "Comprimido",
+                plural: "Comprimidos"
+            },
+            piece: {
+                singular: "Unidade",
+                plural: "Unidades"
+            },
+            unit: {
+                singular: "Unidade",
+                plural: "Unidades"
+            }
+        },
+
         showroomEyebrow: "COLEÇÃO SELECIONADA",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -462,6 +686,38 @@ const translations = {
         priceListTitle: "价格表",
         fromLabel: "起价",
         perUnitLabel: "每",
+
+        /* 单位 */
+        unitTranslations: {
+            gram: {
+                singular: "克",
+                plural: "克"
+            },
+            ml: {
+                singular: "毫升",
+                plural: "毫升"
+            },
+            liter: {
+                singular: "升",
+                plural: "升"
+            },
+            kilogram: {
+                singular: "千克",
+                plural: "千克"
+            },
+            pill: {
+                singular: "粒",
+                plural: "粒"
+            },
+            piece: {
+                singular: "件",
+                plural: "件"
+            },
+            unit: {
+                singular: "单位",
+                plural: "单位"
+            }
+        },
 
         showroomEyebrow: "精选系列",
         showroomTitle: "展厅",
@@ -527,6 +783,38 @@ const translations = {
         fromLabel: "から",
         perUnitLabel: "あたり",
 
+        /* 単位 */
+        unitTranslations: {
+            gram: {
+                singular: "グラム",
+                plural: "グラム"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "リットル",
+                plural: "リットル"
+            },
+            kilogram: {
+                singular: "キログラム",
+                plural: "キログラム"
+            },
+            pill: {
+                singular: "錠",
+                plural: "錠"
+            },
+            piece: {
+                singular: "個",
+                plural: "個"
+            },
+            unit: {
+                singular: "単位",
+                plural: "単位"
+            }
+        },
+
         showroomEyebrow: "厳選されたコレクション",
         showroomTitle: "ショールーム",
         showroomDescription:
@@ -590,6 +878,38 @@ const translations = {
         priceListTitle: "가격표",
         fromLabel: "최저",
         perUnitLabel: "당",
+
+        /* 단위 */
+        unitTranslations: {
+            gram: {
+                singular: "그램",
+                plural: "그램"
+            },
+            ml: {
+                singular: "ml",
+                plural: "ml"
+            },
+            liter: {
+                singular: "리터",
+                plural: "리터"
+            },
+            kilogram: {
+                singular: "킬로그램",
+                plural: "킬로그램"
+            },
+            pill: {
+                singular: "알약",
+                plural: "알약"
+            },
+            piece: {
+                singular: "개",
+                plural: "개"
+            },
+            unit: {
+                singular: "단위",
+                plural: "단위"
+            }
+        },
 
         showroomEyebrow: "엄선된 컬렉션",
         showroomTitle: "쇼룸",
@@ -655,6 +975,38 @@ const translations = {
         fromLabel: "يبدأ من",
         perUnitLabel: "لكل",
 
+        /* الوحدات */
+        unitTranslations: {
+            gram: {
+                singular: "غرام",
+                plural: "غرام"
+            },
+            ml: {
+                singular: "مل",
+                plural: "مل"
+            },
+            liter: {
+                singular: "لتر",
+                plural: "لترات"
+            },
+            kilogram: {
+                singular: "كيلوغرام",
+                plural: "كيلوغرامات"
+            },
+            pill: {
+                singular: "حبة",
+                plural: "حبوب"
+            },
+            piece: {
+                singular: "قطعة",
+                plural: "قطع"
+            },
+            unit: {
+                singular: "وحدة",
+                plural: "وحدات"
+            }
+        },
+
         showroomEyebrow: "مجموعة مختارة",
         showroomTitle: "المعرض",
         showroomDescription:
@@ -718,6 +1070,38 @@ const translations = {
         priceListTitle: "Прайс-лист",
         fromLabel: "От",
         perUnitLabel: "за",
+
+        /* ЕДИНИЦЫ */
+        unitTranslations: {
+            gram: {
+                singular: "Грамм",
+                plural: "Грамм"
+            },
+            ml: {
+                singular: "мл",
+                plural: "мл"
+            },
+            liter: {
+                singular: "Литр",
+                plural: "Литра"
+            },
+            kilogram: {
+                singular: "Килограмм",
+                plural: "Килограмм"
+            },
+            pill: {
+                singular: "Таблетка",
+                plural: "Таблетки"
+            },
+            piece: {
+                singular: "Штука",
+                plural: "Штук"
+            },
+            unit: {
+                singular: "Единица",
+                plural: "Единиц"
+            }
+        },
 
         showroomEyebrow: "ИЗБРАННАЯ КОЛЛЕКЦИЯ",
         showroomTitle: "Шоурум",
@@ -797,6 +1181,54 @@ const flags = {
 
 
 /* =========================
+   EENHEID OPHALEN
+   ========================= */
+
+function getTranslatedUnit(unitType, quantity, language) {
+
+    language =
+        language ||
+        localStorage.getItem("language") ||
+        "nl";
+
+    const languageData =
+        translations[language] ||
+        translations.en;
+
+    const units =
+        languageData.unitTranslations ||
+        {};
+
+    const key =
+        String(unitType || "unit")
+            .trim()
+            .toLowerCase();
+
+    const unit =
+        units[key] ||
+        units.unit ||
+        translations.en.unitTranslations.unit;
+
+    /*
+     * Voor Nederlands, Engels, Frans enz.
+     * gebruiken we enkelvoud/meervoud.
+     *
+     * Bij 1:
+     *   Gram
+     *
+     * Bij meer dan 1:
+     *   Grams / Pillen / Stuks
+     */
+
+    if (Number(quantity) === 1) {
+        return unit.singular;
+    }
+
+    return unit.plural;
+}
+
+
+/* =========================
    TAAL INSTELLEN
    ========================= */
 
@@ -869,6 +1301,12 @@ function setLanguage(language) {
 
     }
 
+
+    /*
+     * Event voor andere scripts,
+     * zoals de productprijzenlijst.
+     */
+
     document.dispatchEvent(
         new CustomEvent("languageChanged")
     );
@@ -889,70 +1327,133 @@ const languageMenu =
 if (languageButton && languageMenu) {
 
     function setLanguageMenuOpen(open) {
-        languageMenu.classList.toggle("open", open);
-        languageButton.classList.toggle("open", open);
-        languageButton.setAttribute("aria-expanded", String(open));
+
+        languageMenu.classList.toggle(
+            "open",
+            open
+        );
+
+        languageButton.classList.toggle(
+            "open",
+            open
+        );
+
+        languageButton.setAttribute(
+            "aria-expanded",
+            String(open)
+        );
+
     }
+
 
     function toggleLanguageMenu(event) {
+
         if (event) {
+
             event.preventDefault();
             event.stopPropagation();
+
         }
 
+
         const isOpen =
-            languageMenu.classList.contains("open");
+            languageMenu.classList.contains(
+                "open"
+            );
+
 
         setLanguageMenuOpen(!isOpen);
+
     }
+
 
     languageButton.addEventListener(
         "click",
         toggleLanguageMenu,
-        { passive: false }
+        {
+            passive: false
+        }
     );
+
 
     languageButton.addEventListener(
         "keydown",
         function(event) {
-            if (event.key === "Enter" || event.key === " ") {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
                 toggleLanguageMenu(event);
+
             }
 
-            if (event.key === "Escape") {
+
+            if (
+                event.key === "Escape"
+            ) {
+
                 setLanguageMenuOpen(false);
+
             }
+
         }
     );
 
+
     languageMenu
-        .querySelectorAll("[data-language]")
+        .querySelectorAll(
+            "[data-language]"
+        )
         .forEach(function(button) {
 
             button.addEventListener(
                 "click",
                 function(event) {
+
                     event.preventDefault();
                     event.stopPropagation();
+
 
                     const language =
                         button.dataset.language;
 
-                    setLanguage(language);
-                    setLanguageMenuOpen(false);
+
+                    setLanguage(
+                        language
+                    );
+
+
+                    setLanguageMenuOpen(
+                        false
+                    );
+
                 }
             );
+
         });
+
 
     document.addEventListener(
         "click",
         function(event) {
+
             if (
-                !languageMenu.contains(event.target) &&
-                !languageButton.contains(event.target)
+                !languageMenu.contains(
+                    event.target
+                ) &&
+                !languageButton.contains(
+                    event.target
+                )
             ) {
-                setLanguageMenuOpen(false);
+
+                setLanguageMenuOpen(
+                    false
+                );
+
             }
+
         }
     );
 
@@ -969,4 +1470,6 @@ const savedLanguage =
     ) || "nl";
 
 
-setLanguage(savedLanguage);
+setLanguage(
+    savedLanguage
+);

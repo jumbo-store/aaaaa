@@ -7,7 +7,7 @@
 
     <title>Product</title>
 
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body>
@@ -17,52 +17,224 @@
     <div class="nav">
 
         <a href="index.html" class="logo">
-            <img src="images/logo-elephant.png?v=6" alt="Merk logo">
+            <img
+                src="images/logo-elephant.png?v=7"
+                alt="Merk logo">
         </a>
 
         <nav>
-            <a href="info.html" data-i18n="navInfo">Info</a>
+
+            <a
+                href="info.html"
+                data-i18n="navInfo">
+                Info
+            </a>
+
+
+            <!-- =========================
+                 TAAL
+                 ========================= -->
 
             <div class="language">
 
-                <button class="language-button" id="languageButton" type="button" aria-haspopup="true" aria-expanded="false">
-                    <span id="currentFlag">🇳🇱</span>
-                    <span class="language-arrow">⌄</span>
+                <button
+                    class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+
+                    <span id="currentFlag">
+                        🇳🇱
+                    </span>
+
+                    <span class="language-arrow">
+                        ⌄
+                    </span>
+
                 </button>
 
-                <div class="language-menu" id="languageMenu">
 
-                    <button type="button" data-language="nl">🇳🇱 <span>Nederlands</span></button>
-                    <button type="button" data-language="en">🇬🇧 <span>English</span></button>
-                    <button type="button" data-language="de">🇩🇪 <span>Deutsch</span></button>
-                    <button type="button" data-language="fr">🇫🇷 <span>Français</span></button>
-                    <button type="button" data-language="es">🇪🇸 <span>Español</span></button>
-                    <button type="button" data-language="it">🇮🇹 <span>Italiano</span></button>
-                    <button type="button" data-language="pt">🇵🇹 <span>Português</span></button>
-                    <button type="button" data-language="zh">🇨🇳 <span>中文</span></button>
-                    <button type="button" data-language="ja">🇯🇵 <span>日本語</span></button>
-                    <button type="button" data-language="ko">🇰🇷 <span>한국어</span></button>
-                    <button type="button" data-language="ar">🇸🇦 <span>العربية</span></button>
-                    <button type="button" data-language="ru">🇷🇺 <span>Русский</span></button>
+                <div
+                    class="language-menu"
+                    id="languageMenu">
+
+                    <button
+                        type="button"
+                        data-language="nl">
+                        🇳🇱
+                        <span>Nederlands</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="en">
+                        🇬🇧
+                        <span>English</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="de">
+                        🇩🇪
+                        <span>Deutsch</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="fr">
+                        🇫🇷
+                        <span>Français</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="es">
+                        🇪🇸
+                        <span>Español</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="it">
+                        🇮🇹
+                        <span>Italiano</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="pt">
+                        🇵🇹
+                        <span>Português</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="zh">
+                        🇨🇳
+                        <span>中文</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="ja">
+                        🇯🇵
+                        <span>日本語</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="ko">
+                        🇰🇷
+                        <span>한국어</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="ar">
+                        🇸🇦
+                        <span>العربية</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-language="ru">
+                        🇷🇺
+                        <span>Русский</span>
+                    </button>
+
                 </div>
+
             </div>
 
+
+            <!-- =========================
+                 VALUTA
+                 ========================= -->
+
             <div class="currency-selector">
-                <button class="currency-button" id="currencyButton" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Currency">
-                    <span id="currentCurrency">EUR</span>
-                    <span class="currency-arrow">⌄</span>
+
+                <button
+                    class="currency-button"
+                    id="currencyButton"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Currency">
+
+                    <span id="currentCurrency">
+                        EUR
+                    </span>
+
+                    <span class="currency-arrow">
+                        ⌄
+                    </span>
+
                 </button>
 
-                <div class="currency-menu" id="currencyMenu">
-                    <button type="button" data-currency="EUR">EUR <span>€ Euro</span></button>
-                    <button type="button" data-currency="USD">USD <span>$ US Dollar</span></button>
-                    <button type="button" data-currency="GBP">GBP <span>£ Pound</span></button>
-                    <button type="button" data-currency="CHF">CHF <span>Swiss Franc</span></button>
-                    <button type="button" data-currency="JPY">JPY <span>¥ Yen</span></button>
-                    <button type="button" data-currency="CNY">CNY <span>¥ Yuan</span></button>
-                    <button type="button" data-currency="CAD">CAD <span>CA$ Canadian Dollar</span></button>
-                    <button type="button" data-currency="AUD">AUD <span>A$ Australian Dollar</span></button>
+
+                <div
+                    class="currency-menu"
+                    id="currencyMenu">
+
+                    <button
+                        type="button"
+                        data-currency="EUR">
+                        EUR
+                        <span>€ Euro</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="USD">
+                        USD
+                        <span>$ US Dollar</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="GBP">
+                        GBP
+                        <span>£ Pound</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="CHF">
+                        CHF
+                        <span>Swiss Franc</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="JPY">
+                        JPY
+                        <span>¥ Yen</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="CNY">
+                        CNY
+                        <span>¥ Yuan</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="CAD">
+                        CAD
+                        <span>CA$ Canadian Dollar</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-currency="AUD">
+                        AUD
+                        <span>A$ Australian Dollar</span>
+                    </button>
+
                 </div>
+
             </div>
 
         </nav>
@@ -72,68 +244,133 @@
 </header>
 
 
+
 <main class="product-page">
 
-    <a href="index.html" class="back" aria-label="Terug naar showroom">
-        <span class="back-icon" aria-hidden="true">←</span>
-        <span class="back-label" data-i18n="backLabel">Terug</span>
+
+    <!-- =========================
+         TERUG
+         ========================= -->
+
+    <a
+        href="index.html"
+        class="back"
+        aria-label="Terug naar showroom">
+
+        <span
+            class="back-icon"
+            aria-hidden="true">
+            ←
+        </span>
+
+        <span
+            class="back-label"
+            data-i18n="backLabel">
+            Terug
+        </span>
+
     </a>
 
 
+
+    <!-- =========================
+         PRODUCT
+         ========================= -->
+
     <section class="product-detail">
+
+
+        <!-- =========================
+             GALERIJ
+             ========================= -->
 
         <div class="gallery">
 
             <div class="gallery-window">
 
-                <div class="gallery-track" id="galleryTrack"></div>
+                <div
+                    class="gallery-track"
+                    id="galleryTrack">
+                </div>
 
 
-                <!-- Pijlen -->
+                <!-- Vorige -->
 
                 <button
                     type="button"
                     class="gallery-arrow gallery-arrow-left"
                     id="previousButton"
                     aria-label="Vorige afbeelding">
+
                     ‹
+
                 </button>
+
+
+                <!-- Volgende -->
 
                 <button
                     type="button"
                     class="gallery-arrow gallery-arrow-right"
                     id="nextButton"
                     aria-label="Volgende afbeelding">
+
                     ›
+
                 </button>
 
             </div>
 
 
-            <div class="gallery-dots" id="galleryDots"></div>
+            <div
+                class="gallery-dots"
+                id="galleryDots">
+            </div>
 
         </div>
 
 
+
+        <!-- =========================
+             PRODUCT INFO
+             ========================= -->
+
         <div class="product-detail-info">
 
-            <span class="eyebrow" data-i18n="productEyebrow">
+            <span
+                class="eyebrow"
+                data-i18n="productEyebrow">
                 SELECTED PRODUCT
             </span>
+
 
             <h1 id="productName">
                 Product
             </h1>
 
-            <div class="detail-price" id="productPrice">
+
+            <!-- Hoofdprijs -->
+
+            <div
+                class="detail-price"
+                id="productPrice">
                 €0
             </div>
+
+
+            <!-- Beschrijving -->
 
             <p id="productDescription">
                 Productomschrijving.
             </p>
 
-            <div id="productPricing" class="product-pricing"></div>
+
+            <!-- Prijzenlijst -->
+
+            <div
+                id="productPricing"
+                class="product-pricing">
+            </div>
 
         </div>
 
@@ -142,235 +379,1170 @@
 </main>
 
 
-<script src="products.js?v=6"></script>
-<script src="currency.js?v=6"></script>
-<script src="language.js?v=6"></script>
+
+<!-- =========================
+     SCRIPTS
+     ========================= -->
+
+<script src="products.js?v=7"></script>
+<script src="currency.js?v=7"></script>
+<script src="language.js?v=7"></script>
+
 
 <script>
 
-const params = new URLSearchParams(window.location.search);
-const productId = Number(params.get("id") || 1);
-const product = products.find(function(item) {
-    return item.id === productId;
-}) || products[0];
+/* =========================================================
+   PRODUCT SELECTEREN
+   ========================================================= */
 
-const productName = document.getElementById("productName");
-const productDescription = document.getElementById("productDescription");
-const productPricing = document.getElementById("productPricing");
-const galleryTrack = document.getElementById("galleryTrack");
-const galleryDots = document.getElementById("galleryDots");
-const previousButton = document.getElementById("previousButton");
-const nextButton = document.getElementById("nextButton");
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const productId =
+    Number(
+        params.get("id") || 1
+    );
+
+
+const product =
+    products.find(function(item) {
+
+        return item.id === productId;
+
+    }) || products[0];
+
+
+
+/* =========================================================
+   ELEMENTEN
+   ========================================================= */
+
+const productName =
+    document.getElementById(
+        "productName"
+    );
+
+
+const productDescription =
+    document.getElementById(
+        "productDescription"
+    );
+
+
+const productPricing =
+    document.getElementById(
+        "productPricing"
+    );
+
+
+const productPrice =
+    document.getElementById(
+        "productPrice"
+    );
+
+
+const galleryTrack =
+    document.getElementById(
+        "galleryTrack"
+    );
+
+
+const galleryDots =
+    document.getElementById(
+        "galleryDots"
+    );
+
+
+const previousButton =
+    document.getElementById(
+        "previousButton"
+    );
+
+
+const nextButton =
+    document.getElementById(
+        "nextButton"
+    );
+
 
 let currentSlide = 0;
 
-productName.textContent = product.name;
+
+
+/* =========================================================
+   PRODUCTNAAM
+   ========================================================= */
+
+productName.textContent =
+    product.name;
+
+
+
+/* =========================================================
+   TAALGEGEVENS
+   ========================================================= */
+
+function getCurrentLanguageData() {
+
+    const language =
+        localStorage.getItem(
+            "language"
+        ) || "nl";
+
+
+    if (
+        typeof translations !==
+        "undefined"
+    ) {
+
+        return (
+            translations[language] ||
+            translations.en ||
+            {}
+        );
+
+    }
+
+
+    return {};
+
+}
+
+
+
+/* =========================================================
+   EENHEID
+   ========================================================= */
+
+function getProductUnit(
+    quantity
+) {
+
+    const language =
+        localStorage.getItem(
+            "language"
+        ) || "nl";
+
+
+    /*
+     * Gebruik de nieuwe functie
+     * uit language.js.
+     */
+
+    if (
+        typeof getTranslatedUnit ===
+        "function"
+    ) {
+
+        return getTranslatedUnit(
+            product.unitType,
+            quantity,
+            language
+        );
+
+    }
+
+
+    /*
+     * Veilige fallback wanneer
+     * language.js niet geladen is.
+     */
+
+    return product.unitType ||
+        "Unit";
+
+}
+
+
+
+/* =========================================================
+   PRODUCTOMSCHRIJVING
+   ========================================================= */
 
 function updateProductDescription() {
-    const language = localStorage.getItem("language") || "nl";
+
+    const language =
+        localStorage.getItem(
+            "language"
+        ) || "nl";
+
+
     const description =
-        product.description[language] ||
-        product.description.nl ||
-        product.description.en ||
-        "";
-    productDescription.textContent = description;
+        product.description &&
+        (
+            product.description[language] ||
+            product.description.nl ||
+            product.description.en ||
+            ""
+        );
+
+
+    productDescription.textContent =
+        description || "";
+
 }
 
-function formatProductPrice(amount) {
-    if (typeof window.formatCurrency === "function") {
-        return window.formatCurrency(amount);
+
+
+/* =========================================================
+   PRIJS OPMAKEN
+   ========================================================= */
+
+function formatProductPrice(
+    amount
+) {
+
+    if (
+        typeof window.formatCurrency ===
+        "function"
+    ) {
+
+        return window.formatCurrency(
+            amount
+        );
+
     }
-    return "€" + Number(amount).toFixed(2);
+
+
+    return (
+        "€" +
+        Number(amount).toFixed(2)
+    );
+
 }
+
+
+
+/* =========================================================
+   GOEDKOOPSTE STAFFEL
+   ========================================================= */
+
+/*
+ * Belangrijk:
+ *
+ * We zoeken niet naar de laagste
+ * totale prijs.
+ *
+ * We zoeken naar de laagste
+ * prijs PER EENHEID.
+ *
+ * Voorbeeld:
+ *
+ * 1 gram  = €70
+ * 3 gram  = €190 → €63,33 / gram
+ * 5 gram  = €300 → €60 / gram
+ *
+ * Resultaat:
+ * €60 per gram
+ */
 
 function getCheapestTier() {
-    const tiers = Array.isArray(product.prices) ? product.prices : [];
-    if (!tiers.length) return null;
 
-    return tiers.reduce(function(lowest, tier) {
-        return Number(tier.priceEUR) < Number(lowest.priceEUR) ? tier : lowest;
-    }, tiers[0]);
-}
+    const tiers =
+        Array.isArray(product.prices)
+            ? product.prices
+            : [];
 
-function getLanguageData() {
-    const language = localStorage.getItem("language") || "nl";
-    if (typeof translations !== "undefined") {
-        return translations[language] || translations.en || {};
+
+    if (!tiers.length) {
+
+        return null;
+
     }
-    return {};
+
+
+    return tiers.reduce(
+        function(
+            cheapest,
+            tier
+        ) {
+
+            const quantity =
+                Number(
+                    tier.quantity
+                );
+
+
+            const price =
+                Number(
+                    tier.priceEUR
+                );
+
+
+            const cheapestQuantity =
+                Number(
+                    cheapest.quantity
+                );
+
+
+            const cheapestPrice =
+                Number(
+                    cheapest.priceEUR
+                );
+
+
+            const currentUnitPrice =
+                quantity > 0
+                    ? price / quantity
+                    : Infinity;
+
+
+            const cheapestUnitPrice =
+                cheapestQuantity > 0
+                    ? cheapestPrice /
+                      cheapestQuantity
+                    : Infinity;
+
+
+            return currentUnitPrice <
+                cheapestUnitPrice
+                ? tier
+                : cheapest;
+
+        },
+        tiers[0]
+    );
+
 }
+
+
+
+/* =========================================================
+   HOOFDPRIJS
+   ========================================================= */
 
 function updateProductMainPrice() {
-    const element = document.getElementById("productPrice");
-    const cheapestTier = getCheapestTier();
-    if (element && cheapestTier) {
-        const languageData = getLanguageData();
-        const fromLabel = languageData.fromLabel || "From";
-        element.textContent = fromLabel + ": " + formatProductPrice(cheapestTier.priceEUR);
+
+    if (!productPrice) {
+
+        return;
+
     }
+
+
+    const cheapestTier =
+        getCheapestTier();
+
+
+    if (!cheapestTier) {
+
+        productPrice.textContent =
+            "";
+
+        return;
+
+    }
+
+
+    const languageData =
+        getCurrentLanguageData();
+
+
+    const fromLabel =
+        languageData.fromLabel ||
+        "From";
+
+
+    const quantity =
+        Number(
+            cheapestTier.quantity
+        );
+
+
+    const totalPrice =
+        Number(
+            cheapestTier.priceEUR
+        );
+
+
+    const unitPrice =
+        quantity > 0
+            ? totalPrice / quantity
+            : totalPrice;
+
+
+    productPrice.textContent =
+        fromLabel +
+        ": " +
+        formatProductPrice(
+            unitPrice
+        );
+
 }
+
+
+
+/* =========================================================
+   PRIJZENLIJST
+   ========================================================= */
 
 function updateProductPricing() {
-    if (!productPricing) return;
 
-    const languageData = getLanguageData();
-    const title = languageData.priceListTitle || "Price list";
-    const perUnitLabel = languageData.perUnitLabel || "per";
+    if (!productPricing) {
 
-    productPricing.innerHTML = "";
+        return;
 
-    const heading = document.createElement("h2");
-    heading.textContent = title;
-    productPricing.appendChild(heading);
+    }
 
-    const list = document.createElement("div");
-    list.className = "pricing-list";
 
-    (product.prices || []).forEach(function(tier) {
-        const row = document.createElement("div");
-        row.className = "pricing-row";
+    const languageData =
+        getCurrentLanguageData();
 
-        const quantity = document.createElement("span");
-        quantity.className = "pricing-quantity";
-        quantity.textContent = tier.quantity + " " + (product.unitType || "eenheid");
 
-        const price = document.createElement("span");
-        price.className = "pricing-price";
+    const title =
+        languageData.priceListTitle ||
+        "Price list";
 
-        const totalPrice = document.createElement("strong");
-        totalPrice.textContent = formatProductPrice(tier.priceEUR);
 
-        const unitPrice = document.createElement("small");
-        const unitCost = Number(tier.priceEUR) / Number(tier.quantity || 1);
-        unitPrice.textContent = " = " + formatProductPrice(unitCost) + " " + perUnitLabel + " " + (product.unitType || "eenheid");
+    const perUnitLabel =
+        languageData.perUnitLabel ||
+        "per";
 
-        price.appendChild(totalPrice);
-        price.appendChild(unitPrice);
 
-        row.appendChild(quantity);
-        row.appendChild(price);
-        list.appendChild(row);
-    });
+    /*
+     * De eenheid na "per"
+     * is altijd enkelvoud.
+     *
+     * Bijvoorbeeld:
+     *
+     * €50 per Gram
+     * €50 per Pil
+     *
+     * en niet:
+     *
+     * €50 per Grams
+     */
 
-    productPricing.appendChild(list);
+    const perUnit =
+        getProductUnit(
+            1
+        );
+
+
+    productPricing.innerHTML =
+        "";
+
+
+
+    /* =========================
+       TITEL
+       ========================= */
+
+    const heading =
+        document.createElement(
+            "h2"
+        );
+
+
+    heading.textContent =
+        title;
+
+
+    productPricing.appendChild(
+        heading
+    );
+
+
+
+    /* =========================
+       LIJST
+       ========================= */
+
+    const list =
+        document.createElement(
+            "div"
+        );
+
+
+    list.className =
+        "pricing-list";
+
+
+
+    const tiers =
+        Array.isArray(product.prices)
+            ? product.prices
+            : [];
+
+
+
+    tiers.forEach(
+        function(tier) {
+
+            const quantity =
+                Number(
+                    tier.quantity
+                );
+
+
+            const totalPrice =
+                Number(
+                    tier.priceEUR
+                );
+
+
+            const unitPrice =
+                quantity > 0
+                    ? totalPrice / quantity
+                    : totalPrice;
+
+
+
+            /* =====================
+               RIJ
+               ===================== */
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+            row.className =
+                "pricing-row";
+
+
+
+            /* =====================
+               HOEVEELHEID
+               ===================== */
+
+            const quantityElement =
+                document.createElement(
+                    "span"
+                );
+
+
+            quantityElement.className =
+                "pricing-quantity";
+
+
+            const translatedUnit =
+                getProductUnit(
+                    quantity
+                );
+
+
+            quantityElement.textContent =
+                quantity +
+                " " +
+                translatedUnit;
+
+
+
+            /* =====================
+               PRIJS
+               ===================== */
+
+            const priceElement =
+                document.createElement(
+                    "span"
+                );
+
+
+            priceElement.className =
+                "pricing-price";
+
+
+
+            /* Totale prijs */
+
+            const totalPriceElement =
+                document.createElement(
+                    "strong"
+                );
+
+
+            totalPriceElement.textContent =
+                formatProductPrice(
+                    totalPrice
+                );
+
+
+
+            /* Prijs per eenheid */
+
+            const unitPriceElement =
+                document.createElement(
+                    "small"
+                );
+
+
+            unitPriceElement.className =
+                "pricing-per-unit";
+
+
+            unitPriceElement.textContent =
+                "= " +
+                formatProductPrice(
+                    unitPrice
+                ) +
+                " " +
+                perUnitLabel +
+                " " +
+                perUnit;
+
+
+
+            priceElement.appendChild(
+                totalPriceElement
+            );
+
+
+            priceElement.appendChild(
+                unitPriceElement
+            );
+
+
+
+            /* =====================
+               RIJ SAMENVOEGEN
+               ===================== */
+
+            row.appendChild(
+                quantityElement
+            );
+
+
+            row.appendChild(
+                priceElement
+            );
+
+
+            list.appendChild(
+                row
+            );
+
+        }
+    );
+
+
+
+    productPricing.appendChild(
+        list
+    );
+
 }
+
+
+
+/* =========================================================
+   GALERIJ
+   ========================================================= */
 
 function buildGallery() {
-    galleryTrack.innerHTML = "";
-    galleryDots.innerHTML = "";
 
-    const imageList = Array.isArray(product.images) && product.images.length
-        ? product.images
-        : [null, null, null, null];
+    galleryTrack.innerHTML =
+        "";
 
-    imageList.forEach(function(image, index) {
-        const slide = document.createElement("div");
-        slide.className = "gallery-slide";
+    galleryDots.innerHTML =
+        "";
 
-        const placeholder = document.createElement("div");
-        placeholder.className = "gallery-placeholder";
-        placeholder.innerHTML =
-            '<span class="gallery-placeholder-product">' + String(product.id).padStart(2, "0") + '</span>' +
-            '<span class="gallery-placeholder-photo">' + String(index + 1).padStart(2, "0") + '</span>';
-        slide.appendChild(placeholder);
 
-        const img = document.createElement("img");
-        img.alt = product.name + " - foto " + (index + 1);
-        if (image) {
-            img.src = image;
-        } else {
-            img.remove();
+    const imageList =
+        Array.isArray(product.images) &&
+        product.images.length
+            ? product.images
+            : [
+                null,
+                null,
+                null,
+                null
+            ];
+
+
+
+    imageList.forEach(
+        function(
+            image,
+            index
+        ) {
+
+            /* =====================
+               SLIDE
+               ===================== */
+
+            const slide =
+                document.createElement(
+                    "div"
+                );
+
+
+            slide.className =
+                "gallery-slide";
+
+
+
+            /* =====================
+               PLACEHOLDER
+               ===================== */
+
+            const placeholder =
+                document.createElement(
+                    "div"
+                );
+
+
+            placeholder.className =
+                "gallery-placeholder";
+
+
+            placeholder.innerHTML =
+                '<span class="gallery-placeholder-product">' +
+                String(
+                    product.id
+                ).padStart(
+                    2,
+                    "0"
+                ) +
+                "</span>" +
+
+                '<span class="gallery-placeholder-photo">' +
+                String(
+                    index + 1
+                ).padStart(
+                    2,
+                    "0"
+                ) +
+                "</span>";
+
+
+            slide.appendChild(
+                placeholder
+            );
+
+
+
+            /* =====================
+               AFBEELDING
+               ===================== */
+
+            if (image) {
+
+                const img =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                img.src =
+                    image;
+
+
+                img.alt =
+                    product.name +
+                    " - foto " +
+                    (index + 1);
+
+
+                img.loading =
+                    index === 0
+                        ? "eager"
+                        : "lazy";
+
+
+                img.decoding =
+                    "async";
+
+
+                img.draggable =
+                    false;
+
+
+
+                img.addEventListener(
+                    "load",
+                    function() {
+
+                        placeholder.hidden =
+                            true;
+
+
+                        slide.classList.add(
+                            "has-image"
+                        );
+
+                    }
+                );
+
+
+                img.addEventListener(
+                    "error",
+                    function() {
+
+                        img.remove();
+
+                    }
+                );
+
+
+                slide.appendChild(
+                    img
+                );
+
+            }
+
+
+
+            galleryTrack.appendChild(
+                slide
+            );
+
+
+
+            /* =====================
+               DOT
+               ===================== */
+
+            const dot =
+                document.createElement(
+                    "button"
+                );
+
+
+            dot.type =
+                "button";
+
+
+            dot.className =
+                "gallery-dot";
+
+
+            dot.setAttribute(
+                "aria-label",
+                "Foto " +
+                (index + 1)
+            );
+
+
+            if (index === 0) {
+
+                dot.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            dot.addEventListener(
+                "click",
+                function() {
+
+                    goToSlide(
+                        index
+                    );
+
+                }
+            );
+
+
+            galleryDots.appendChild(
+                dot
+            );
+
         }
-        img.loading = index === 0 ? "eager" : "lazy";
-        img.decoding = "async";
-        img.draggable = false;
-        img.addEventListener("load", function() {
-            placeholder.hidden = true;
-            slide.classList.add("has-image");
-        });
-        img.addEventListener("error", function() {
-            img.remove();
-        });
+    );
 
-        slide.appendChild(img);
-        galleryTrack.appendChild(slide);
-
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "gallery-dot";
-        dot.setAttribute("aria-label", "Foto " + (index + 1));
-        if (index === 0) dot.classList.add("active");
-        dot.addEventListener("click", function() { goToSlide(index); });
-        galleryDots.appendChild(dot);
-    });
 }
+
+
+
+/* =========================================================
+   NAAR SLIDE
+   ========================================================= */
 
 function goToSlide(index) {
-    if (index < 0) index = 0;
-    if (index >= product.images.length) index = galleryTrack.querySelectorAll(".gallery-slide").length - 1;
-    currentSlide = index;
+
+    const slides =
+        galleryTrack.querySelectorAll(
+            ".gallery-slide"
+        );
+
+
+    const totalSlides =
+        slides.length;
+
+
+    if (!totalSlides) {
+
+        return;
+
+    }
+
+
+    if (index < 0) {
+
+        index = 0;
+
+    }
+
+
+    if (index >= totalSlides) {
+
+        index =
+            totalSlides - 1;
+
+    }
+
+
+    currentSlide =
+        index;
+
 
     galleryTrack.scrollTo({
-        left: galleryTrack.clientWidth * currentSlide,
-        behavior: "smooth"
+
+        left:
+            galleryTrack.clientWidth *
+            currentSlide,
+
+        behavior:
+            "smooth"
+
     });
+
 
     updateDots();
+
     updateArrows();
+
 }
+
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
 
 function updateDots() {
-    galleryDots.querySelectorAll(".gallery-dot").forEach(function(dot, index) {
-        dot.classList.toggle("active", index === currentSlide);
-    });
+
+    galleryDots
+        .querySelectorAll(
+            ".gallery-dot"
+        )
+        .forEach(
+            function(
+                dot,
+                index
+            ) {
+
+                dot.classList.toggle(
+                    "active",
+                    index ===
+                    currentSlide
+                );
+
+            }
+        );
+
 }
+
+
+
+/* =========================================================
+   PIJLEN
+   ========================================================= */
 
 function updateArrows() {
-    previousButton.disabled = currentSlide === 0;
-    nextButton.disabled = currentSlide === galleryTrack.querySelectorAll(".gallery-slide").length - 1;
+
+    const slides =
+        galleryTrack.querySelectorAll(
+            ".gallery-slide"
+        );
+
+
+    const totalSlides =
+        slides.length;
+
+
+    previousButton.disabled =
+        currentSlide <= 0;
+
+
+    nextButton.disabled =
+        currentSlide >=
+        totalSlides - 1;
+
 }
 
-previousButton.addEventListener("click", function() {
-    goToSlide(currentSlide - 1);
-});
 
-nextButton.addEventListener("click", function() {
-    goToSlide(currentSlide + 1);
-});
 
-galleryTrack.addEventListener("scroll", function() {
-    const width = galleryTrack.clientWidth;
-    if (!width) return;
-    const slide = Math.round(galleryTrack.scrollLeft / width);
-    if (slide !== currentSlide && slide >= 0 && slide < product.images.length) {
-        currentSlide = slide;
-        updateDots();
-        updateArrows();
+/* =========================================================
+   PIJLTJE LINKS
+   ========================================================= */
+
+previousButton.addEventListener(
+    "click",
+    function() {
+
+        goToSlide(
+            currentSlide - 1
+        );
+
     }
-});
+);
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowLeft") goToSlide(currentSlide - 1);
-    if (event.key === "ArrowRight") goToSlide(currentSlide + 1);
-});
 
-document.addEventListener("currencyChanged", function() {
-    updateProductMainPrice();
-    updateProductPricing();
-});
-document.addEventListener("languageChanged", function() {
-    updateProductDescription();
-    updateProductPricing();
-});
+
+/* =========================================================
+   PIJLTJE RECHTS
+   ========================================================= */
+
+nextButton.addEventListener(
+    "click",
+    function() {
+
+        goToSlide(
+            currentSlide + 1
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   SWIPE / SCROLL
+   ========================================================= */
+
+galleryTrack.addEventListener(
+    "scroll",
+    function() {
+
+        const width =
+            galleryTrack.clientWidth;
+
+
+        if (!width) {
+
+            return;
+
+        }
+
+
+        const slide =
+            Math.round(
+                galleryTrack.scrollLeft /
+                width
+            );
+
+
+        if (
+            slide !== currentSlide &&
+            slide >= 0 &&
+            slide <
+                galleryTrack.querySelectorAll(
+                    ".gallery-slide"
+                ).length
+        ) {
+
+            currentSlide =
+                slide;
+
+
+            updateDots();
+
+            updateArrows();
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   TOETSENBORD
+   ========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key ===
+            "ArrowLeft"
+        ) {
+
+            goToSlide(
+                currentSlide - 1
+            );
+
+        }
+
+
+        if (
+            event.key ===
+            "ArrowRight"
+        ) {
+
+            goToSlide(
+                currentSlide + 1
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   VALUTA VERANDERD
+   ========================================================= */
+
+document.addEventListener(
+    "currencyChanged",
+    function() {
+
+        updateProductMainPrice();
+
+        updateProductPricing();
+
+    }
+);
+
+
+
+/* =========================================================
+   TAAL VERANDERD
+   ========================================================= */
+
+document.addEventListener(
+    "languageChanged",
+    function() {
+
+        updateProductDescription();
+
+        updateProductMainPrice();
+
+        updateProductPricing();
+
+    }
+);
+
+
+
+/* =========================================================
+   START
+   ========================================================= */
 
 buildGallery();
+
 updateProductDescription();
+
 updateProductMainPrice();
+
 updateProductPricing();
+
 updateDots();
+
 updateArrows();
 
 </script>
 
 </body>
+
 </html>
