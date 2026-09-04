@@ -1499,8 +1499,6 @@ background 0.3s ease,
 
 }
 
-dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
-
 /* =================================
    MOBILE-FIRST INTERACTION FIXES
    ================================= */
@@ -1590,7 +1588,7 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
         height: 34px;
         min-width: 44px;
         min-height: 34px;
-        border: 1px solid rgba(255, 212, 0, 0.45);
+        border: 1px solid #ffd400;
         background: rgba(255, 212, 0, 0.06);
     }
 
@@ -1781,14 +1779,14 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
 .logo img {
     display: block;
 
-    width: 100px;
-    height: 100px;
+    width: 222px;
+    height: 222px;
 
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 222px;
+    max-height: 222px;
 
     object-fit: contain;
-    flex: 0 0 100px;
+    flex: 0 0 222px;
 }
 
 .logo span {
@@ -1819,4 +1817,215 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
         flex: 0 0 100px;
     }
 
+}
+
+
+/* =================================
+   VALUTA DROPDOWN
+   ================================= */
+
+.currency-selector {
+    position: relative;
+    z-index: 1200;
+}
+
+.currency-button {
+    width: 58px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid rgba(255, 212, 0, 0.45);
+    background: rgba(255, 212, 0, 0.03);
+    color: white;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.currency-button:hover,
+.currency-button.open {
+    border-color: #ffd400;
+    background: rgba(255, 212, 0, 0.08);
+}
+
+.currency-arrow {
+    color: #ffd400;
+    font-size: 13px;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.currency-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 220px;
+    padding: 7px;
+    background: #101010;
+    border: 1px solid rgba(255, 212, 0, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.currency-menu.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.currency-menu button {
+    width: 100%;
+    min-height: 38px;
+    border: 0;
+    background: transparent;
+    color: #ccc;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.currency-menu button:hover {
+    background: rgba(255, 212, 0, 0.08);
+    color: #ffd400;
+}
+
+.currency-menu button span {
+    margin-left: auto;
+    color: #777;
+}
+
+.currency-menu button:hover span {
+    color: #aaa;
+}
+
+/* =================================
+   PRIJSLIJST
+   ================================= */
+
+.product-pricing {
+    margin-top: 34px;
+    max-width: 440px;
+}
+
+.product-pricing h2 {
+    margin-bottom: 12px;
+    color: #f5f5f5;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pricing-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-quantity {
+    color: #999;
+    font-size: 13px;
+}
+
+.pricing-price {
+    color: #ffd400;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* =================================
+   HEADER: TAAL + VALUTA NAAST ELKAAR
+   ================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language,
+.currency-selector {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+    nav {
+        gap: 8px;
+    }
+
+    .language-button,
+    .currency-button {
+        height: 34px;
+        min-height: 34px;
+    }
+
+    .currency-button {
+        width: 58px;
+        min-width: 58px;
+        border-color: #ffd400;
+        background: rgba(255, 212, 0, 0.06);
+    }
+
+    .currency-menu {
+        top: calc(100% + 10px);
+        width: min(220px, calc(100vw - 28px));
+        max-height: min(65vh, 430px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    .currency-menu button {
+        min-height: 42px;
+        padding: 10px 12px;
+    }
+
+    .product-pricing {
+        margin-top: 28px;
+    }
+}
+
+
+/* =================================
+   LOGO - FINAL SIZE
+   ================================= */
+.logo img {
+    width: 222px;
+    height: 222px;
+    max-width: 222px;
+    max-height: 222px;
+    flex: 0 0 222px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .logo img {
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        flex: 0 0 100px;
+    }
 }

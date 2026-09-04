@@ -15,8 +15,7 @@
     <div class="nav">
 
         <a href="index.html" class="logo">
-            <img src="images/logo-elephant.png" alt="Merk logo">
-            <span>MERK</span>
+            MERK
         </a>
 
         <nav>
@@ -24,73 +23,44 @@
             <a href="info.html" data-i18n="navInfo">Info</a>
 
             <div class="language">
-                <button class="language-button" id="languageButton" type="button">
+
+                <button class="language-button" id="languageButton" type="button" aria-haspopup="true" aria-expanded="false">
                     <span id="currentFlag">🇳🇱</span>
                     <span class="language-arrow">⌄</span>
                 </button>
 
                 <div class="language-menu" id="languageMenu">
 
-                    <button type="button" data-language="nl">
-                        🇳🇱
-                        <span>Nederlands</span>
-                    </button>
+                    <button type="button" data-language="nl">🇳🇱 <span>Nederlands</span></button>
+                    <button type="button" data-language="en">🇬🇧 <span>English</span></button>
+                    <button type="button" data-language="de">🇩🇪 <span>Deutsch</span></button>
+                    <button type="button" data-language="fr">🇫🇷 <span>Français</span></button>
+                    <button type="button" data-language="es">🇪🇸 <span>Español</span></button>
+                    <button type="button" data-language="it">🇮🇹 <span>Italiano</span></button>
+                    <button type="button" data-language="pt">🇵🇹 <span>Português</span></button>
+                    <button type="button" data-language="zh">🇨🇳 <span>中文</span></button>
+                    <button type="button" data-language="ja">🇯🇵 <span>日本語</span></button>
+                    <button type="button" data-language="ko">🇰🇷 <span>한국어</span></button>
+                    <button type="button" data-language="ar">🇸🇦 <span>العربية</span></button>
+                    <button type="button" data-language="ru">🇷🇺 <span>Русский</span></button>
+                </div>
+            </div>
 
-                    <button type="button" data-language="en">
-                        🇬🇧
-                        <span>English</span>
-                    </button>
+            <div class="currency-selector">
+                <button class="currency-button" id="currencyButton" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Currency">
+                    <span id="currentCurrency">EUR</span>
+                    <span class="currency-arrow">⌄</span>
+                </button>
 
-                    <button type="button" data-language="de">
-                        🇩🇪
-                        <span>Deutsch</span>
-                    </button>
-
-                    <button type="button" data-language="fr">
-                        🇫🇷
-                        <span>Français</span>
-                    </button>
-
-                    <button type="button" data-language="es">
-                        🇪🇸
-                        <span>Español</span>
-                    </button>
-
-                    <button type="button" data-language="it">
-                        🇮🇹
-                        <span>Italiano</span>
-                    </button>
-
-                    <button type="button" data-language="pt">
-                        🇵🇹
-                        <span>Português</span>
-                    </button>
-
-                    <button type="button" data-language="zh">
-                        🇨🇳
-                        <span>中文</span>
-                    </button>
-
-                    <button type="button" data-language="ja">
-                        🇯🇵
-                        <span>日本語</span>
-                    </button>
-
-                    <button type="button" data-language="ko">
-                        🇰🇷
-                        <span>한국어</span>
-                    </button>
-
-                    <button type="button" data-language="ar">
-                        🇸🇦
-                        <span>العربية</span>
-                    </button>
-
-                    <button type="button" data-language="ru">
-                        🇷🇺
-                        <span>Русский</span>
-                    </button>
-
+                <div class="currency-menu" id="currencyMenu">
+                    <button type="button" data-currency="EUR">EUR <span>€ Euro</span></button>
+                    <button type="button" data-currency="USD">USD <span>$ US Dollar</span></button>
+                    <button type="button" data-currency="GBP">GBP <span>£ Pound</span></button>
+                    <button type="button" data-currency="CHF">CHF <span>Swiss Franc</span></button>
+                    <button type="button" data-currency="JPY">JPY <span>¥ Yen</span></button>
+                    <button type="button" data-currency="CNY">CNY <span>¥ Yuan</span></button>
+                    <button type="button" data-currency="CAD">CAD <span>CA$ Canadian Dollar</span></button>
+                    <button type="button" data-currency="AUD">AUD <span>A$ Australian Dollar</span></button>
                 </div>
             </div>
 
@@ -109,7 +79,7 @@
         <div class="product-text">
             <span class="product-number">01</span>
             <h2>Product 1</h2>
-            <div class="price">€49</div>
+            <div class="price" data-product-price="1"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -124,7 +94,7 @@
         <div class="product-text">
             <span class="product-number">02</span>
             <h2>Product 2</h2>
-            <div class="price">€79</div>
+            <div class="price" data-product-price="2"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -138,7 +108,7 @@
         <div class="product-text">
             <span class="product-number">03</span>
             <h2>Product 3</h2>
-            <div class="price">€59</div>
+            <div class="price" data-product-price="3"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -153,7 +123,7 @@
         <div class="product-text">
             <span class="product-number">04</span>
             <h2>Product 4</h2>
-            <div class="price">€89</div>
+            <div class="price" data-product-price="4"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -167,7 +137,7 @@
         <div class="product-text">
             <span class="product-number">05</span>
             <h2>Product 5</h2>
-            <div class="price">€69</div>
+            <div class="price" data-product-price="5"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -182,7 +152,7 @@
         <div class="product-text">
             <span class="product-number">06</span>
             <h2>Product 6</h2>
-            <div class="price">€99</div>
+            <div class="price" data-product-price="6"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -196,7 +166,7 @@
         <div class="product-text">
             <span class="product-number">07</span>
             <h2>Product 7</h2>
-            <div class="price">€39</div>
+            <div class="price" data-product-price="7"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -211,7 +181,7 @@
         <div class="product-text">
             <span class="product-number">08</span>
             <h2>Product 8</h2>
-            <div class="price">€109</div>
+            <div class="price" data-product-price="8"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -225,7 +195,7 @@
         <div class="product-text">
             <span class="product-number">09</span>
             <h2>Product 9</h2>
-            <div class="price">€49</div>
+            <div class="price" data-product-price="9"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -240,7 +210,7 @@
         <div class="product-text">
             <span class="product-number">10</span>
             <h2>Product 10</h2>
-            <div class="price">€129</div>
+            <div class="price" data-product-price="10"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -254,7 +224,7 @@
         <div class="product-text">
             <span class="product-number">11</span>
             <h2>Product 11</h2>
-            <div class="price">€79</div>
+            <div class="price" data-product-price="11"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -269,7 +239,7 @@
         <div class="product-text">
             <span class="product-number">12</span>
             <h2>Product 12</h2>
-            <div class="price">€149</div>
+            <div class="price" data-product-price="12"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -283,7 +253,7 @@
         <div class="product-text">
             <span class="product-number">13</span>
             <h2>Product 13</h2>
-            <div class="price">€89</div>
+            <div class="price" data-product-price="13"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -298,7 +268,7 @@
         <div class="product-text">
             <span class="product-number">14</span>
             <h2>Product 14</h2>
-            <div class="price">€119</div>
+            <div class="price" data-product-price="14"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -312,7 +282,7 @@
         <div class="product-text">
             <span class="product-number">15</span>
             <h2>Product 15</h2>
-            <div class="price">€59</div>
+            <div class="price" data-product-price="15"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -327,7 +297,7 @@
         <div class="product-text">
             <span class="product-number">16</span>
             <h2>Product 16</h2>
-            <div class="price">€139</div>
+            <div class="price" data-product-price="16"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -341,7 +311,7 @@
         <div class="product-text">
             <span class="product-number">17</span>
             <h2>Product 17</h2>
-            <div class="price">€69</div>
+            <div class="price" data-product-price="17"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -356,7 +326,7 @@
         <div class="product-text">
             <span class="product-number">18</span>
             <h2>Product 18</h2>
-            <div class="price">€159</div>
+            <div class="price" data-product-price="18"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -370,7 +340,7 @@
         <div class="product-text">
             <span class="product-number">19</span>
             <h2>Product 19</h2>
-            <div class="price">€99</div>
+            <div class="price" data-product-price="19"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -385,7 +355,7 @@
         <div class="product-text">
             <span class="product-number">20</span>
             <h2>Product 20</h2>
-            <div class="price">€179</div>
+            <div class="price" data-product-price="20"></div>
             <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
@@ -394,6 +364,8 @@
 </main>
 
 
+<script src="products.js"></script>
+<script src="currency.js"></script>
 <script src="language.js"></script>
 
 </body>

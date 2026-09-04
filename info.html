@@ -17,8 +17,7 @@
     <div class="nav">
 
         <a href="index.html" class="logo">
-            <img src="images/logo-elephant.png" alt="Merk logo">
-            <span>MERK</span>
+            MERK
         </a>
 
         <nav>
@@ -32,83 +31,44 @@
 
             <div class="language">
 
-                <button
-                    class="language-button"
-                    id="languageButton"
-                    type="button">
-
+                <button class="language-button" id="languageButton" type="button" aria-haspopup="true" aria-expanded="false">
                     <span id="currentFlag">🇳🇱</span>
                     <span class="language-arrow">⌄</span>
-
                 </button>
 
+                <div class="language-menu" id="languageMenu">
 
-                <div
-                    class="language-menu"
-                    id="languageMenu">
-
-                    <button type="button" data-language="nl">
-                        🇳🇱
-                        <span>Nederlands</span>
-                    </button>
-
-                    <button type="button" data-language="en">
-                        🇬🇧
-                        <span>English</span>
-                    </button>
-
-                    <button type="button" data-language="de">
-                        🇩🇪
-                        <span>Deutsch</span>
-                    </button>
-
-                    <button type="button" data-language="fr">
-                        🇫🇷
-                        <span>Français</span>
-                    </button>
-
-                    <button type="button" data-language="es">
-                        🇪🇸
-                        <span>Español</span>
-                    </button>
-
-                    <button type="button" data-language="it">
-                        🇮🇹
-                        <span>Italiano</span>
-                    </button>
-
-                    <button type="button" data-language="pt">
-                        🇵🇹
-                        <span>Português</span>
-                    </button>
-
-                    <button type="button" data-language="zh">
-                        🇨🇳
-                        <span>中文</span>
-                    </button>
-
-                    <button type="button" data-language="ja">
-                        🇯🇵
-                        <span>日本語</span>
-                    </button>
-
-                    <button type="button" data-language="ko">
-                        🇰🇷
-                        <span>한국어</span>
-                    </button>
-
-                    <button type="button" data-language="ar">
-                        🇸🇦
-                        <span>العربية</span>
-                    </button>
-
-                    <button type="button" data-language="ru">
-                        🇷🇺
-                        <span>Русский</span>
-                    </button>
-
+                    <button type="button" data-language="nl">🇳🇱 <span>Nederlands</span></button>
+                    <button type="button" data-language="en">🇬🇧 <span>English</span></button>
+                    <button type="button" data-language="de">🇩🇪 <span>Deutsch</span></button>
+                    <button type="button" data-language="fr">🇫🇷 <span>Français</span></button>
+                    <button type="button" data-language="es">🇪🇸 <span>Español</span></button>
+                    <button type="button" data-language="it">🇮🇹 <span>Italiano</span></button>
+                    <button type="button" data-language="pt">🇵🇹 <span>Português</span></button>
+                    <button type="button" data-language="zh">🇨🇳 <span>中文</span></button>
+                    <button type="button" data-language="ja">🇯🇵 <span>日本語</span></button>
+                    <button type="button" data-language="ko">🇰🇷 <span>한국어</span></button>
+                    <button type="button" data-language="ar">🇸🇦 <span>العربية</span></button>
+                    <button type="button" data-language="ru">🇷🇺 <span>Русский</span></button>
                 </div>
+            </div>
 
+            <div class="currency-selector">
+                <button class="currency-button" id="currencyButton" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Currency">
+                    <span id="currentCurrency">EUR</span>
+                    <span class="currency-arrow">⌄</span>
+                </button>
+
+                <div class="currency-menu" id="currencyMenu">
+                    <button type="button" data-currency="EUR">EUR <span>€ Euro</span></button>
+                    <button type="button" data-currency="USD">USD <span>$ US Dollar</span></button>
+                    <button type="button" data-currency="GBP">GBP <span>£ Pound</span></button>
+                    <button type="button" data-currency="CHF">CHF <span>Swiss Franc</span></button>
+                    <button type="button" data-currency="JPY">JPY <span>¥ Yen</span></button>
+                    <button type="button" data-currency="CNY">CNY <span>¥ Yuan</span></button>
+                    <button type="button" data-currency="CAD">CAD <span>CA$ Canadian Dollar</span></button>
+                    <button type="button" data-currency="AUD">AUD <span>A$ Australian Dollar</span></button>
+                </div>
             </div>
 
         </nav>
@@ -246,6 +206,7 @@
 </main>
 
 
+<script src="currency.js"></script>
 <script src="language.js"></script>
 
 </body>

@@ -10,6 +10,9 @@ const translations = {
         navInfo: "Info",
         backLabel: "Terug",
 
+        currencyLabel: "Valuta",
+        priceListTitle: "Prijslijst",
+
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -68,6 +71,9 @@ const translations = {
         navShowroom: "Showroom",
         navInfo: "Info",
         backLabel: "Back",
+
+        currencyLabel: "Currency",
+        priceListTitle: "Price list",
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -128,6 +134,9 @@ const translations = {
         navInfo: "Info",
         backLabel: "Zurück",
 
+        currencyLabel: "Währung",
+        priceListTitle: "Preisliste",
+
         showroomEyebrow: "AUSGEWÄHLTE KOLLEKTION",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -186,6 +195,9 @@ const translations = {
         navShowroom: "Showroom",
         navInfo: "Info",
         backLabel: "Retour",
+
+        currencyLabel: "Devise",
+        priceListTitle: "Tarifs",
 
         showroomEyebrow: "COLLECTION SÉLECTIONNÉE",
         showroomTitle: "Showroom",
@@ -246,6 +258,9 @@ const translations = {
         navInfo: "Información",
         backLabel: "Atrás",
 
+        currencyLabel: "Moneda",
+        priceListTitle: "Lista de precios",
+
         showroomEyebrow: "COLECCIÓN SELECCIONADA",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -304,6 +319,9 @@ const translations = {
         navShowroom: "Showroom",
         navInfo: "Info",
         backLabel: "Indietro",
+
+        currencyLabel: "Valuta",
+        priceListTitle: "Listino prezzi",
 
         showroomEyebrow: "COLLEZIONE SELEZIONATA",
         showroomTitle: "Showroom",
@@ -364,6 +382,9 @@ const translations = {
         navInfo: "Informação",
         backLabel: "Voltar",
 
+        currencyLabel: "Moeda",
+        priceListTitle: "Tabela de preços",
+
         showroomEyebrow: "COLEÇÃO SELECIONADA",
         showroomTitle: "Showroom",
         showroomDescription:
@@ -422,6 +443,9 @@ const translations = {
         navShowroom: "展厅",
         navInfo: "信息",
         backLabel: "返回",
+
+        currencyLabel: "货币",
+        priceListTitle: "价格表",
 
         showroomEyebrow: "精选系列",
         showroomTitle: "展厅",
@@ -482,6 +506,9 @@ const translations = {
         navInfo: "情報",
         backLabel: "戻る",
 
+        currencyLabel: "通貨",
+        priceListTitle: "価格表",
+
         showroomEyebrow: "厳選されたコレクション",
         showroomTitle: "ショールーム",
         showroomDescription:
@@ -540,6 +567,9 @@ const translations = {
         navShowroom: "쇼룸",
         navInfo: "정보",
         backLabel: "뒤로",
+
+        currencyLabel: "통화",
+        priceListTitle: "가격표",
 
         showroomEyebrow: "엄선된 컬렉션",
         showroomTitle: "쇼룸",
@@ -600,6 +630,9 @@ const translations = {
         navInfo: "معلومات",
         backLabel: "العودة",
 
+        currencyLabel: "العملة",
+        priceListTitle: "قائمة الأسعار",
+
         showroomEyebrow: "مجموعة مختارة",
         showroomTitle: "المعرض",
         showroomDescription:
@@ -658,6 +691,9 @@ const translations = {
         navShowroom: "Шоурум",
         navInfo: "Информация",
         backLabel: "Назад",
+
+        currencyLabel: "Валюта",
+        priceListTitle: "Прайс-лист",
 
         showroomEyebrow: "ИЗБРАННАЯ КОЛЛЕКЦИЯ",
         showroomTitle: "Шоурум",
@@ -808,6 +844,10 @@ function setLanguage(language) {
         updateProductDescription();
 
     }
+
+    document.dispatchEvent(
+        new CustomEvent("languageChanged")
+    );
 
 }
 

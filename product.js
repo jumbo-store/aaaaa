@@ -3,7 +3,13 @@ const products = [
     {
         id: 1,
         name: "Product 1",
-        price: "€49",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 49 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 1.",
@@ -32,7 +38,13 @@ const products = [
     {
         id: 2,
         name: "Product 2",
-        price: "€79",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 79 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 2.",
@@ -61,7 +73,13 @@ const products = [
     {
         id: 3,
         name: "Product 3",
-        price: "€59",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 59 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 3.",
@@ -90,7 +108,13 @@ const products = [
     {
         id: 4,
         name: "Product 4",
-        price: "€89",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 89 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 4.",
@@ -119,7 +143,13 @@ const products = [
     {
         id: 5,
         name: "Product 5",
-        price: "€69",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 69 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 5.",
@@ -146,7 +176,13 @@ const products = [
     {
         id: 6,
         name: "Product 6",
-        price: "€99",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 99 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 6.",
@@ -174,7 +210,13 @@ const products = [
     {
         id: 7,
         name: "Product 7",
-        price: "€39",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 39 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 7.",
@@ -203,7 +245,13 @@ const products = [
     {
         id: 8,
         name: "Product 8",
-        price: "€109",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 109 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 8.",
@@ -229,7 +277,13 @@ const products = [
     {
         id: 9,
         name: "Product 9",
-        price: "€49",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 49 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 9.",
@@ -257,7 +311,13 @@ const products = [
     {
         id: 10,
         name: "Product 10",
-        price: "€129",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 129 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 10.",
@@ -286,7 +346,13 @@ const products = [
     {
         id: 11,
         name: "Product 11",
-        price: "€79",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 79 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 11.",
@@ -313,7 +379,13 @@ const products = [
     {
         id: 12,
         name: "Product 12",
-        price: "€149",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 149 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 12.",
@@ -341,7 +413,13 @@ const products = [
     {
         id: 13,
         name: "Product 13",
-        price: "€89",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 89 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 13.",
@@ -368,7 +446,13 @@ const products = [
     {
         id: 14,
         name: "Product 14",
-        price: "€119",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 119 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 14.",
@@ -396,7 +480,13 @@ const products = [
     {
         id: 15,
         name: "Product 15",
-        price: "€59",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 59 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 15.",
@@ -422,7 +512,13 @@ const products = [
     {
         id: 16,
         name: "Product 16",
-        price: "€139",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 139 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 16.",
@@ -450,7 +546,13 @@ const products = [
     {
         id: 17,
         name: "Product 17",
-        price: "€69",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 69 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 17.",
@@ -477,7 +579,13 @@ const products = [
     {
         id: 18,
         name: "Product 18",
-        price: "€159",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 159 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 18.",
@@ -506,7 +614,13 @@ const products = [
     {
         id: 19,
         name: "Product 19",
-        price: "€99",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 99 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 19.",
@@ -533,7 +647,13 @@ const products = [
     {
         id: 20,
         name: "Product 20",
-        price: "€179",
+        unitType: "eenheid",
+        prices: [
+            { quantity: 1, priceEUR: 179 }
+            // Voeg hier eenvoudig meer staffels toe:
+            // , { quantity: 2, priceEUR: 90 }
+            // , { quantity: 3, priceEUR: 130 }
+        ],
 
         description: {
             nl: "Korte omschrijving van product 20.",
