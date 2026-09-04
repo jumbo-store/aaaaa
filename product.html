@@ -2,98 +2,97 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Product</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-<header class="site-header">
+
+<header>
 
     <div class="nav">
 
-        <a href="index.html" class="logo">
+        <a
+            href="index.html"
+            class="logo"
+        >
             MERK
         </a>
 
+
         <nav>
-            <a href="index.html" data-i18n="navShowroom">Showroom</a>
-            <a href="info.html" data-i18n="navInfo">Info</a>
 
-            <div class="language">
+            <a
+                href="index.html"
+                data-i18n="showroom"
+            >
+                Showroom
+            </a>
 
-                <button class="language-button" id="languageButton" type="button">
-                    <span id="currentFlag">🇳🇱</span>
-                    <span class="language-arrow">⌄</span>
+            <a
+                href="info.html"
+                data-i18n="info"
+            >
+                Info
+            </a>
+
+
+            <div class="language-selector">
+
+                <button
+                    class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Language"
+                    aria-expanded="false"
+                >
+
+                    <span id="currentFlag">
+                        🇬🇧
+                    </span>
+
+                    <span class="language-arrow">
+                        ⌄
+                    </span>
+
                 </button>
 
-                <div class="language-menu" id="languageMenu">
 
-                    <button type="button" data-language="nl">
-                        🇳🇱
-                        <span>Nederlands</span>
-                    </button>
+                <div
+                    class="language-menu"
+                    id="languageMenu"
+                >
 
-                    <button type="button" data-language="en">
-                        🇬🇧
-                        <span>English</span>
-                    </button>
-
-                    <button type="button" data-language="de">
-                        🇩🇪
-                        <span>Deutsch</span>
-                    </button>
-
-                    <button type="button" data-language="fr">
-                        🇫🇷
-                        <span>Français</span>
-                    </button>
-
-                    <button type="button" data-language="es">
-                        🇪🇸
-                        <span>Español</span>
-                    </button>
-
-                    <button type="button" data-language="it">
-                        🇮🇹
-                        <span>Italiano</span>
-                    </button>
-
-                    <button type="button" data-language="pt">
-                        🇵🇹
-                        <span>Português</span>
-                    </button>
-
-                    <button type="button" data-language="zh">
-                        🇨🇳
-                        <span>中文</span>
-                    </button>
-
-                    <button type="button" data-language="ja">
-                        🇯🇵
-                        <span>日本語</span>
-                    </button>
-
-                    <button type="button" data-language="ko">
-                        🇰🇷
-                        <span>한국어</span>
-                    </button>
-
-                    <button type="button" data-language="ar">
-                        🇸🇦
-                        <span>العربية</span>
-                    </button>
-
-                    <button type="button" data-language="ru">
-                        🇷🇺
-                        <span>Русский</span>
-                    </button>
+                    <button data-lang="nl">🇳🇱</button>
+                    <button data-lang="en">🇬🇧</button>
+                    <button data-lang="zh">🇨🇳</button>
+                    <button data-lang="hi">🇮🇳</button>
+                    <button data-lang="es">🇪🇸</button>
+                    <button data-lang="fr">🇫🇷</button>
+                    <button data-lang="ar">🇸🇦</button>
+                    <button data-lang="bn">🇧🇩</button>
+                    <button data-lang="pt">🇵🇹</button>
+                    <button data-lang="ru">🇷🇺</button>
+                    <button data-lang="id">🇮🇩</button>
+                    <button data-lang="de">🇩🇪</button>
 
                 </div>
+
             </div>
 
         </nav>
@@ -103,61 +102,88 @@
 </header>
 
 
+
 <main class="product-page">
 
-    <a href="index.html" class="back" aria-label="Terug naar showroom">
-        ←
+
+    <a
+        href="index.html"
+        class="back"
+        data-i18n="back"
+    >
+        ← Terug
     </a>
 
 
+
     <section class="product-detail">
+
+
+        <!-- GALERIJ -->
 
         <div class="gallery">
 
             <div class="gallery-window">
 
-                <div class="gallery-track" id="galleryTrack"></div>
+                <div
+                    class="gallery-track"
+                    id="galleryTrack"
+                >
+                </div>
 
 
-                <!-- Pijlen -->
+                <!-- VORIGE -->
 
                 <button
+                    class="gallery-arrow gallery-prev"
+                    id="prevButton"
                     type="button"
-                    class="gallery-arrow gallery-arrow-left"
-                    id="previousButton"
-                    aria-label="Vorige afbeelding">
-                    ‹
+                    aria-label="Previous image"
+                >
+                    ←
                 </button>
 
+
+                <!-- VOLGENDE -->
+
                 <button
-                    type="button"
-                    class="gallery-arrow gallery-arrow-right"
+                    class="gallery-arrow gallery-next"
                     id="nextButton"
-                    aria-label="Volgende afbeelding">
-                    ›
+                    type="button"
+                    aria-label="Next image"
+                >
+                    →
                 </button>
 
             </div>
 
 
-            <div class="gallery-dots" id="galleryDots"></div>
+            <div
+                class="gallery-dots"
+                id="galleryDots"
+            >
+            </div>
 
         </div>
 
 
-        <div class="product-detail-info">
 
-            <span class="eyebrow" data-i18n="productEyebrow">
-                SELECTED PRODUCT
-            </span>
+        <!-- PRODUCT INFORMATIE -->
+
+        <div class="product-detail-info">
 
             <h1 id="productName">
                 Product
             </h1>
 
-            <div class="detail-price" id="productPrice">
+
+            <div
+                class="detail-price"
+                id="productPrice"
+            >
                 €0
             </div>
+
 
             <p id="productDescription">
                 Productomschrijving.
@@ -165,616 +191,625 @@
 
         </div>
 
+
     </section>
 
 </main>
 
 
-<script src="language.js"></script>
+
+<script src="products.js"></script>
+
 
 <script>
 
-const products = {
-
-    1: {
-        name: "Product 1",
-        price: "€49",
-
-        description: {
-            nl: "Korte omschrijving van product 1.",
-            en: "Short description of product 1.",
-            de: "Kurze Beschreibung von Produkt 1.",
-            fr: "Courte description du produit 1.",
-            es: "Breve descripción del producto 1.",
-            it: "Breve descrizione del prodotto 1.",
-            pt: "Breve descrição do produto 1.",
-            zh: "产品 1 的简短描述。",
-            ja: "商品1の簡単な説明です。",
-            ko: "제품 1의 간단한 설명입니다.",
-            ar: "وصف مختصر للمنتج 1.",
-            ru: "Краткое описание товара 1."
-        },
-
-        images: [
-            "images/product-01/1.jpg",
-            "images/product-01/2.jpg",
-            "images/product-01/3.jpg",
-            "images/product-01/4.jpg"
-        ]
-    },
-
-
-    2: {
-        name: "Product 2",
-        price: "€79",
-
-        description: {
-            nl: "Korte omschrijving van product 2.",
-            en: "Short description of product 2.",
-            de: "Kurze Beschreibung von Produkt 2.",
-            fr: "Courte description du produit 2.",
-            es: "Breve descripción del producto 2.",
-            it: "Breve descrizione del prodotto 2.",
-            pt: "Breve descrição do produto 2.",
-            zh: "产品 2 的简短描述。",
-            ja: "商品2の簡単な説明です。",
-            ko: "제품 2의 간단한 설명입니다.",
-            ar: "وصف مختصر للمنتج 2.",
-            ru: "Краткое описание товара 2."
-        },
-
-        images: [
-            "images/product-02/1.jpg",
-            "images/product-02/2.jpg"
-        ]
-    },
-
-
-    3: {
-        name: "Product 3",
-        price: "€59",
-
-        description: {
-            nl: "Korte omschrijving van product 3.",
-            en: "Short description of product 3.",
-            de: "Kurze Beschreibung von Produkt 3.",
-            fr: "Courte description du produit 3.",
-            es: "Breve descripción del producto 3.",
-            it: "Breve descrizione del prodotto 3.",
-            pt: "Breve descrição do produto 3.",
-            zh: "产品 3 的简短描述。",
-            ja: "商品3の簡単な説明です。",
-            ko: "제품 3의 간단한 설명입니다.",
-            ar: "وصف مختصر للمنتج 3.",
-            ru: "Краткое описание товара 3."
-        },
-
-        images: [
-            "images/product-03/1.jpg",
-            "images/product-03/2.jpg",
-            "images/product-03/3.jpg"
-        ]
-    },
-
-
-    4: {
-        name: "Product 4",
-        price: "€89",
-
-        description: {
-            nl: "Korte omschrijving van product 4.",
-            en: "Short description of product 4.",
-            de: "Kurze Beschreibung von Produkt 4.",
-            fr: "Courte description du produit 4.",
-            es: "Breve descripción del producto 4.",
-            it: "Breve descrizione del prodotto 4.",
-            pt: "Breve descrição do produto 4.",
-            zh: "产品 4 的简短描述。",
-            ja: "商品4の簡単な説明です。",
-            ko: "제품 4의 간단한 설명입니다.",
-            ar: "وصف مختصر للمنتج 4.",
-            ru: "Краткое описание товара 4."
-        },
-
-        images: [
-            "images/product-04/1.jpg",
-            "images/product-04/2.jpg",
-            "images/product-04/3.jpg",
-            "images/product-04/4.jpg"
-        ]
-    },
-
-
-    /*
-     * KOPIEER HIERONDER DEZELFDE STRUCTUUR
-     * VOOR PRODUCT 5 T/M 20.
-     */
-
-    5: {
-        name: "Product 5",
-        price: "€69",
-        description: {
-            nl: "Korte omschrijving van product 5.",
-            en: "Short description of product 5."
-        },
-        images: [
-            "images/product-05/1.jpg"
-        ]
-    },
-
-    6: {
-        name: "Product 6",
-        price: "€99",
-        description: {
-            nl: "Korte omschrijving van product 6.",
-            en: "Short description of product 6."
-        },
-        images: [
-            "images/product-06/1.jpg"
-        ]
-    },
-
-    7: {
-        name: "Product 7",
-        price: "€39",
-        description: {
-            nl: "Korte omschrijving van product 7.",
-            en: "Short description of product 7."
-        },
-        images: [
-            "images/product-07/1.jpg"
-        ]
-    },
-
-    8: {
-        name: "Product 8",
-        price: "€109",
-        description: {
-            nl: "Korte omschrijving van product 8.",
-            en: "Short description of product 8."
-        },
-        images: [
-            "images/product-08/1.jpg"
-        ]
-    },
-
-    9: {
-        name: "Product 9",
-        price: "€49",
-        description: {
-            nl: "Korte omschrijving van product 9.",
-            en: "Short description of product 9."
-        },
-        images: [
-            "images/product-09/1.jpg"
-        ]
-    },
-
-    10: {
-        name: "Product 10",
-        price: "€129",
-        description: {
-            nl: "Korte omschrijving van product 10.",
-            en: "Short description of product 10."
-        },
-        images: [
-            "images/product-10/1.jpg"
-        ]
-    },
-
-    11: {
-        name: "Product 11",
-        price: "€79",
-        description: {
-            nl: "Korte omschrijving van product 11.",
-            en: "Short description of product 11."
-        },
-        images: [
-            "images/product-11/1.jpg"
-        ]
-    },
-
-    12: {
-        name: "Product 12",
-        price: "€149",
-        description: {
-            nl: "Korte omschrijving van product 12.",
-            en: "Short description of product 12."
-        },
-        images: [
-            "images/product-12/1.jpg"
-        ]
-    },
-
-    13: {
-        name: "Product 13",
-        price: "€89",
-        description: {
-            nl: "Korte omschrijving van product 13.",
-            en: "Short description of product 13."
-        },
-        images: [
-            "images/product-13/1.jpg"
-        ]
-    },
-
-    14: {
-        name: "Product 14",
-        price: "€119",
-        description: {
-            nl: "Korte omschrijving van product 14.",
-            en: "Short description of product 14."
-        },
-        images: [
-            "images/product-14/1.jpg"
-        ]
-    },
-
-    15: {
-        name: "Product 15",
-        price: "€59",
-        description: {
-            nl: "Korte omschrijving van product 15.",
-            en: "Short description of product 15."
-        },
-        images: [
-            "images/product-15/1.jpg"
-        ]
-    },
-
-    16: {
-        name: "Product 16",
-        price: "€139",
-        description: {
-            nl: "Korte omschrijving van product 16.",
-            en: "Short description of product 16."
-        },
-        images: [
-            "images/product-16/1.jpg"
-        ]
-    },
-
-    17: {
-        name: "Product 17",
-        price: "€69",
-        description: {
-            nl: "Korte omschrijving van product 17.",
-            en: "Short description of product 17."
-        },
-        images: [
-            "images/product-17/1.jpg"
-        ]
-    },
-
-    18: {
-        name: "Product 18",
-        price: "€159",
-        description: {
-            nl: "Korte omschrijving van product 18.",
-            en: "Short description of product 18."
-        },
-        images: [
-            "images/product-18/1.jpg"
-        ]
-    },
-
-    19: {
-        name: "Product 19",
-        price: "€99",
-        description: {
-            nl: "Korte omschrijving van product 19.",
-            en: "Short description of product 19."
-        },
-        images: [
-            "images/product-19/1.jpg"
-        ]
-    },
-
-    20: {
-        name: "Product 20",
-        price: "€179",
-        description: {
-            nl: "Korte omschrijving van product 20.",
-            en: "Short description of product 20."
-        },
-        images: [
-            "images/product-20/1.jpg"
-        ]
-    }
-
-};
-
-
-/* =========================
-   PRODUCT SELECTEREN
-   ========================= */
-
-const params = new URLSearchParams(window.location.search);
-
-const productId = params.get("id") || "1";
-
-const product = products[productId] || products[1];
-
-
-/* =========================
-   PRODUCT INFO
-   ========================= */
-
-document.getElementById("productName").textContent =
-    product.name;
-
-document.getElementById("productPrice").textContent =
-    product.price;
-
-
-/* =========================
-   GALERIJ
-   ========================= */
-
-const galleryTrack =
-    document.getElementById("galleryTrack");
-
-const galleryDots =
-    document.getElementById("galleryDots");
-
-const previousButton =
-    document.getElementById("previousButton");
-
-const nextButton =
-    document.getElementById("nextButton");
-
-let currentSlide = 0;
-
-
-/* =========================
-   BESCHRIJVING
-   ========================= */
-
-function updateProductDescription() {
-
-    const language =
-        localStorage.getItem("language") || "nl";
-
-    const description =
-        product.description[language] ||
-        product.description.nl ||
-        product.description.en ||
-        "";
-
-    document.getElementById(
-        "productDescription"
-    ).textContent = description;
-}
-
-
-/* =========================
-   FOTO'S
-   ========================= */
-
-product.images.forEach(function(image, index) {
-
-    const slide =
-        document.createElement("div");
-
-    slide.className =
-        "gallery-slide";
-
-
-    const img =
-        document.createElement("img");
-
-    img.src = image;
-
-    img.alt =
-        `${product.name} - foto ${index + 1}`;
-
-    img.draggable = false;
-
-
-    slide.appendChild(img);
-
-    galleryTrack.appendChild(slide);
-
-
-    const dot =
-        document.createElement("button");
-
-    dot.type = "button";
-
-    dot.className =
-        "gallery-dot";
-
-
-    if (index === 0) {
-        dot.classList.add("active");
-    }
-
-
-    dot.addEventListener("click", function() {
-
-        goToSlide(index);
-
-    });
-
-
-    galleryDots.appendChild(dot);
-
-});
-
-
-/* =========================
-   SLIDE FUNCTIE
-   ========================= */
-
-function goToSlide(index) {
-
-    if (index < 0) {
-        index = 0;
-    }
-
-    if (index >= product.images.length) {
-        index = product.images.length - 1;
-    }
-
-    currentSlide = index;
-
-
-    galleryTrack.scrollTo({
-
-        left:
-            galleryTrack.clientWidth *
-            currentSlide,
-
-        behavior: "smooth"
-
-    });
-
-
-    updateDots();
-
-    updateArrows();
-
-}
-
-
-/* =========================
-   BOLLETJES
-   ========================= */
-
-function updateDots() {
-
-    const dots =
-        galleryDots.querySelectorAll(
-            ".gallery-dot"
-        );
-
-
-    dots.forEach(function(dot, index) {
-
-        dot.classList.toggle(
-            "active",
-            index === currentSlide
-        );
-
-    });
-
-}
-
-
-/* =========================
-   PIJLEN
-   ========================= */
-
-function updateArrows() {
-
-    previousButton.disabled =
-        currentSlide === 0;
-
-    nextButton.disabled =
-        currentSlide ===
-        product.images.length - 1;
-
-}
-
-
-/* =========================
-   PIJLTJES KLIKKEN
-   ========================= */
-
-previousButton.addEventListener(
-    "click",
-    function() {
-
-        goToSlide(
-            currentSlide - 1
-        );
-
-    }
-);
-
-
-nextButton.addEventListener(
-    "click",
-    function() {
-
-        goToSlide(
-            currentSlide + 1
-        );
-
-    }
-);
-
-
-/* =========================
-   SWIPE / SCROLL
-   ========================= */
-
-galleryTrack.addEventListener(
-    "scroll",
-    function() {
-
-        const width =
-            galleryTrack.clientWidth;
-
-        if (!width) {
-            return;
-        }
-
-
-        const slide =
-            Math.round(
-                galleryTrack.scrollLeft /
-                width
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /*
+        ====================================
+        PRODUCT SELECTEREN
+        ====================================
+        */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
             );
 
 
-        if (
-            slide >= 0 &&
-            slide < product.images.length &&
-            slide !== currentSlide
-        ) {
+        const productId =
+            parseInt(
+                params.get("id"),
+                10
+            ) || 1;
 
-            currentSlide = slide;
+
+        const product =
+            products.find(
+                item => item.id === productId
+            ) || products[0];
+
+
+        /*
+        ====================================
+        PRODUCT INFORMATIE
+        ====================================
+        */
+
+        document.getElementById(
+            "productName"
+        ).textContent =
+            product.name;
+
+
+        document.getElementById(
+            "productPrice"
+        ).textContent =
+            product.price;
+
+
+        /*
+        ====================================
+        GALERIJ
+        ====================================
+        */
+
+        const galleryTrack =
+            document.getElementById(
+                "galleryTrack"
+            );
+
+
+        const galleryDots =
+            document.getElementById(
+                "galleryDots"
+            );
+
+
+        const prevButton =
+            document.getElementById(
+                "prevButton"
+            );
+
+
+        const nextButton =
+            document.getElementById(
+                "nextButton"
+            );
+
+
+        let currentSlide = 0;
+
+
+        /*
+        ====================================
+        FOTO'S AANMAKEN
+        ====================================
+        */
+
+        product.images.forEach(
+            function (image, index) {
+
+
+                const slide =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                slide.className =
+                    "gallery-slide";
+
+
+                const img =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                img.src =
+                    image;
+
+
+                img.alt =
+                    `${product.name} - foto ${index + 1}`;
+
+
+                img.draggable =
+                    false;
+
+
+                slide.appendChild(img);
+
+                galleryTrack.appendChild(slide);
+
+
+                /*
+                Bolletje
+                */
+
+                const dot =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                dot.type =
+                    "button";
+
+
+                dot.className =
+                    "gallery-dot";
+
+
+                if (index === 0) {
+
+                    dot.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        goToSlide(index);
+
+                    }
+                );
+
+
+                galleryDots.appendChild(
+                    dot
+                );
+
+            }
+        );
+
+
+        /*
+        ====================================
+        NAAR FOTO
+        ====================================
+        */
+
+        function goToSlide(index) {
+
+
+            if (
+                index < 0 ||
+                index >= product.images.length
+            ) {
+                return;
+            }
+
+
+            currentSlide =
+                index;
+
+
+            galleryTrack.scrollTo({
+
+                left:
+                    galleryTrack.clientWidth *
+                    index,
+
+                behavior:
+                    "smooth"
+
+            });
+
 
             updateDots();
 
-            updateArrows();
+        }
+
+
+        /*
+        ====================================
+        BOLLETJES BIJWERKEN
+        ====================================
+        */
+
+        function updateDots() {
+
+            const dots =
+                galleryDots.querySelectorAll(
+                    ".gallery-dot"
+                );
+
+
+            dots.forEach(
+                function (dot, index) {
+
+                    dot.classList.toggle(
+                        "active",
+                        index === currentSlide
+                    );
+
+                }
+            );
 
         }
+
+
+        /*
+        ====================================
+        VORIGE
+        ====================================
+        */
+
+        prevButton.addEventListener(
+            "click",
+            function () {
+
+                let newIndex =
+                    currentSlide - 1;
+
+
+                if (newIndex < 0) {
+
+                    newIndex =
+                        product.images.length - 1;
+
+                }
+
+
+                goToSlide(newIndex);
+
+            }
+        );
+
+
+        /*
+        ====================================
+        VOLGENDE
+        ====================================
+        */
+
+        nextButton.addEventListener(
+            "click",
+            function () {
+
+                let newIndex =
+                    currentSlide + 1;
+
+
+                if (
+                    newIndex >=
+                    product.images.length
+                ) {
+
+                    newIndex = 0;
+
+                }
+
+
+                goToSlide(newIndex);
+
+            }
+        );
+
+
+        /*
+        ====================================
+        SWIPE
+        ====================================
+        */
+
+        galleryTrack.addEventListener(
+            "scroll",
+            function () {
+
+                const slideWidth =
+                    galleryTrack.clientWidth;
+
+
+                if (slideWidth <= 0) {
+                    return;
+                }
+
+
+                const detectedSlide =
+                    Math.round(
+                        galleryTrack.scrollLeft /
+                        slideWidth
+                    );
+
+
+                if (
+                    detectedSlide !==
+                    currentSlide
+                ) {
+
+                    currentSlide =
+                        detectedSlide;
+
+                    updateDots();
+
+                }
+
+            }
+        );
+
+
+        /*
+        ====================================
+        TAAL
+        ====================================
+        */
+
+        setupLanguage(
+            product
+        );
 
     }
 );
 
 
-/* =========================
-   TOETSENBORD
-   ========================= */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+/*
+========================================
+TAALSYSTEEM
+========================================
+*/
 
-        if (event.key === "ArrowLeft") {
-            goToSlide(currentSlide - 1);
+function setupLanguage(product) {
+
+
+    const translations = {
+
+        nl: {
+            showroom: "Showroom",
+            info: "Info",
+            back: "← Terug"
+        },
+
+        en: {
+            showroom: "Showroom",
+            info: "Info",
+            back: "← Back"
+        },
+
+        zh: {
+            showroom: "展厅",
+            info: "信息",
+            back: "← 返回"
+        },
+
+        hi: {
+            showroom: "शोरूम",
+            info: "जानकारी",
+            back: "← वापस"
+        },
+
+        es: {
+            showroom: "Sala de exposición",
+            info: "Información",
+            back: "← Volver"
+        },
+
+        fr: {
+            showroom: "Showroom",
+            info: "Informations",
+            back: "← Retour"
+        },
+
+        ar: {
+            showroom: "المعرض",
+            info: "معلومات",
+            back: "← رجوع"
+        },
+
+        bn: {
+            showroom: "শোরুম",
+            info: "তথ্য",
+            back: "← ফিরে যান"
+        },
+
+        pt: {
+            showroom: "Showroom",
+            info: "Informações",
+            back: "← Voltar"
+        },
+
+        ru: {
+            showroom: "Шоурум",
+            info: "Информация",
+            back: "← Назад"
+        },
+
+        id: {
+            showroom: "Ruang Pamer",
+            info: "Info",
+            back: "← Kembali"
+        },
+
+        de: {
+            showroom: "Showroom",
+            info: "Info",
+            back: "← Zurück"
         }
 
-        if (event.key === "ArrowRight") {
-            goToSlide(currentSlide + 1);
+    };
+
+
+    const flags = {
+
+        nl: "🇳🇱",
+        en: "🇬🇧",
+        zh: "🇨🇳",
+        hi: "🇮🇳",
+        es: "🇪🇸",
+        fr: "🇫🇷",
+        ar: "🇸🇦",
+        bn: "🇧🇩",
+        pt: "🇵🇹",
+        ru: "🇷🇺",
+        id: "🇮🇩",
+        de: "🇩🇪"
+
+    };
+
+
+    let language =
+        localStorage.getItem(
+            "language"
+        ) || "nl";
+
+
+    function applyLanguage(lang) {
+
+        if (!translations[lang]) {
+            lang = "nl";
         }
+
+
+        language = lang;
+
+
+        localStorage.setItem(
+            "language",
+            language
+        );
+
+
+        document.documentElement.lang =
+            language;
+
+
+        document
+            .querySelectorAll("[data-i18n]")
+            .forEach(function (element) {
+
+                const key =
+                    element.dataset.i18n;
+
+
+                if (
+                    translations[language] &&
+                    translations[language][key]
+                ) {
+
+                    element.textContent =
+                        translations[language][key];
+
+                }
+
+            });
+
+
+        const description =
+            product.description[language] ||
+            product.description.en ||
+            product.description.nl;
+
+
+        document.getElementById(
+            "productDescription"
+        ).textContent =
+            description;
+
+
+        document.getElementById(
+            "currentFlag"
+        ).textContent =
+            flags[language];
 
     }
-);
 
 
-/* =========================
-   START
-   ========================= */
+    const languageButton =
+        document.getElementById(
+            "languageButton"
+        );
 
-updateProductDescription();
 
-updateDots();
+    const languageMenu =
+        document.getElementById(
+            "languageMenu"
+        );
 
-updateArrows();
+
+    languageButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+
+            const isOpen =
+                languageMenu.classList.toggle(
+                    "open"
+                );
+
+
+            languageButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        }
+    );
+
+
+    languageMenu
+        .querySelectorAll("button")
+        .forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        applyLanguage(
+                            button.dataset.lang
+                        );
+
+
+                        languageMenu.classList.remove(
+                            "open"
+                        );
+
+
+                        languageButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    document.addEventListener(
+        "click",
+        function () {
+
+            languageMenu.classList.remove(
+                "open"
+            );
+
+
+            languageButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+    );
+
+
+    applyLanguage(language);
+
+}
 
 </script>
 
