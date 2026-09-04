@@ -5,27 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shop</title>
+    <title>Showroom</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
+
     <div class="nav">
-        <div class="logo">MERK</div>
+
+        <a href="index.html" class="logo">
+            MERK
+        </a>
 
         <nav>
-            <a href="index.html">Shop</a>
-            <a href="leverinfo.html">Leverinfo</a>
-            <a href="productinfo.html">Productinfo</a>
+            <a href="index.html" data-i18n="navShowroom">Showroom</a>
+            <a href="info.html" data-i18n="navInfo">Info</a>
+
+            <div class="language">
+                <button class="language-button" id="languageButton" type="button">
+                    <span id="currentFlag">🇳🇱</span>
+                    <span class="language-arrow">⌄</span>
+                </button>
+
+                <div class="language-menu" id="languageMenu">
+
+                    <button type="button" data-language="nl">
+                        🇳🇱
+                        <span>Nederlands</span>
+                    </button>
+
+                    <button type="button" data-language="en">
+                        🇬🇧
+                        <span>English</span>
+                    </button>
+
+                    <button type="button" data-language="de">
+                        🇩🇪
+                        <span>Deutsch</span>
+                    </button>
+
+                    <button type="button" data-language="fr">
+                        🇫🇷
+                        <span>Français</span>
+                    </button>
+
+                    <button type="button" data-language="es">
+                        🇪🇸
+                        <span>Español</span>
+                    </button>
+
+                    <button type="button" data-language="it">
+                        🇮🇹
+                        <span>Italiano</span>
+                    </button>
+
+                    <button type="button" data-language="pt">
+                        🇵🇹
+                        <span>Português</span>
+                    </button>
+
+                    <button type="button" data-language="zh">
+                        🇨🇳
+                        <span>中文</span>
+                    </button>
+
+                    <button type="button" data-language="ja">
+                        🇯🇵
+                        <span>日本語</span>
+                    </button>
+
+                    <button type="button" data-language="ko">
+                        🇰🇷
+                        <span>한국어</span>
+                    </button>
+
+                    <button type="button" data-language="ar">
+                        🇸🇦
+                        <span>العربية</span>
+                    </button>
+
+                    <button type="button" data-language="ru">
+                        🇷🇺
+                        <span>Русский</span>
+                    </button>
+
+                </div>
+            </div>
+
         </nav>
+
     </div>
+
 </header>
 
 
 <main class="products">
+
+    <div class="showroom-intro">
+
+        <span class="eyebrow" data-i18n="showroomEyebrow">
+            SELECTED COLLECTION
+        </span>
+
+        <h1 data-i18n="showroomTitle">
+            Showroom
+        </h1>
+
+        <p data-i18n="showroomDescription">
+            Ontdek onze geselecteerde producten.
+        </p>
+
+    </div>
 
 
     <!-- RIJ 1 -->
@@ -33,19 +126,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">01</span>
             <h2>Product 1</h2>
             <div class="price">€49</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=1" class="product-image"></a>
+        <a href="product.html?id=1" class="product-image">
+            <span>01</span>
+        </a>
 
-        <a href="product.html?id=2" class="product-image"></a>
+        <a href="product.html?id=2" class="product-image">
+            <span>02</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">02</span>
             <h2>Product 2</h2>
             <div class="price">€79</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -56,19 +155,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">03</span>
             <h2>Product 3</h2>
             <div class="price">€59</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=3" class="product-image"></a>
+        <a href="product.html?id=3" class="product-image">
+            <span>03</span>
+        </a>
 
-        <a href="product.html?id=4" class="product-image"></a>
+        <a href="product.html?id=4" class="product-image">
+            <span>04</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">04</span>
             <h2>Product 4</h2>
             <div class="price">€89</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -79,19 +184,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">05</span>
             <h2>Product 5</h2>
             <div class="price">€69</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=5" class="product-image"></a>
+        <a href="product.html?id=5" class="product-image">
+            <span>05</span>
+        </a>
 
-        <a href="product.html?id=6" class="product-image"></a>
+        <a href="product.html?id=6" class="product-image">
+            <span>06</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">06</span>
             <h2>Product 6</h2>
             <div class="price">€99</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -102,19 +213,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">07</span>
             <h2>Product 7</h2>
             <div class="price">€39</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=7" class="product-image"></a>
+        <a href="product.html?id=7" class="product-image">
+            <span>07</span>
+        </a>
 
-        <a href="product.html?id=8" class="product-image"></a>
+        <a href="product.html?id=8" class="product-image">
+            <span>08</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">08</span>
             <h2>Product 8</h2>
             <div class="price">€109</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -125,19 +242,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">09</span>
             <h2>Product 9</h2>
             <div class="price">€49</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=9" class="product-image"></a>
+        <a href="product.html?id=9" class="product-image">
+            <span>09</span>
+        </a>
 
-        <a href="product.html?id=10" class="product-image"></a>
+        <a href="product.html?id=10" class="product-image">
+            <span>10</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">10</span>
             <h2>Product 10</h2>
             <div class="price">€129</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -148,19 +271,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">11</span>
             <h2>Product 11</h2>
             <div class="price">€79</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=11" class="product-image"></a>
+        <a href="product.html?id=11" class="product-image">
+            <span>11</span>
+        </a>
 
-        <a href="product.html?id=12" class="product-image"></a>
+        <a href="product.html?id=12" class="product-image">
+            <span>12</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">12</span>
             <h2>Product 12</h2>
             <div class="price">€149</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -171,19 +300,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">13</span>
             <h2>Product 13</h2>
             <div class="price">€89</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=13" class="product-image"></a>
+        <a href="product.html?id=13" class="product-image">
+            <span>13</span>
+        </a>
 
-        <a href="product.html?id=14" class="product-image"></a>
+        <a href="product.html?id=14" class="product-image">
+            <span>14</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">14</span>
             <h2>Product 14</h2>
             <div class="price">€119</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -194,19 +329,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">15</span>
             <h2>Product 15</h2>
             <div class="price">€59</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=15" class="product-image"></a>
+        <a href="product.html?id=15" class="product-image">
+            <span>15</span>
+        </a>
 
-        <a href="product.html?id=16" class="product-image"></a>
+        <a href="product.html?id=16" class="product-image">
+            <span>16</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">16</span>
             <h2>Product 16</h2>
             <div class="price">€139</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -217,19 +358,25 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">17</span>
             <h2>Product 17</h2>
             <div class="price">€69</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=17" class="product-image"></a>
+        <a href="product.html?id=17" class="product-image">
+            <span>17</span>
+        </a>
 
-        <a href="product.html?id=18" class="product-image"></a>
+        <a href="product.html?id=18" class="product-image">
+            <span>18</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">18</span>
             <h2>Product 18</h2>
             <div class="price">€159</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
@@ -240,25 +387,33 @@
     <div class="product-row">
 
         <div class="product-text">
+            <span class="product-number">19</span>
             <h2>Product 19</h2>
             <div class="price">€99</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
-        <a href="product.html?id=19" class="product-image"></a>
+        <a href="product.html?id=19" class="product-image">
+            <span>19</span>
+        </a>
 
-        <a href="product.html?id=20" class="product-image"></a>
+        <a href="product.html?id=20" class="product-image">
+            <span>20</span>
+        </a>
 
         <div class="product-text">
+            <span class="product-number">20</span>
             <h2>Product 20</h2>
             <div class="price">€179</div>
-            <p>Korte omschrijving</p>
+            <p data-i18n="shortDescription">Korte omschrijving</p>
         </div>
 
     </div>
 
-
 </main>
+
+
+<script src="language.js"></script>
 
 </body>
 </html>
