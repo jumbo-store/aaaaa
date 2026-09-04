@@ -2,93 +2,109 @@
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Info</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-<header>
+<header class="site-header">
 
     <div class="nav">
 
-        <a
-            href="index.html"
-            class="logo"
-        >
+        <a href="index.html" class="logo">
             MERK
         </a>
 
-
         <nav>
-
-            <a
-                href="index.html"
-                data-i18n="showroom"
-            >
+            <a href="index.html" data-i18n="navShowroom">
                 Showroom
             </a>
 
-            <a
-                href="info.html"
-                data-i18n="info"
-            >
+            <a href="info.html" data-i18n="navInfo">
                 Info
             </a>
 
-
-            <div class="language-selector">
+            <div class="language">
 
                 <button
                     class="language-button"
                     id="languageButton"
-                    type="button"
-                    aria-expanded="false"
-                >
+                    type="button">
 
-                    <span id="currentFlag">
-                        🇬🇧
-                    </span>
-
-                    <span class="language-arrow">
-                        ⌄
-                    </span>
+                    <span id="currentFlag">🇳🇱</span>
+                    <span class="language-arrow">⌄</span>
 
                 </button>
 
 
                 <div
                     class="language-menu"
-                    id="languageMenu"
-                >
+                    id="languageMenu">
 
-                    <button data-lang="nl">🇳🇱</button>
-                    <button data-lang="en">🇬🇧</button>
-                    <button data-lang="zh">🇨🇳</button>
-                    <button data-lang="hi">🇮🇳</button>
-                    <button data-lang="es">🇪🇸</button>
-                    <button data-lang="fr">🇫🇷</button>
-                    <button data-lang="ar">🇸🇦</button>
-                    <button data-lang="bn">🇧🇩</button>
-                    <button data-lang="pt">🇵🇹</button>
-                    <button data-lang="ru">🇷🇺</button>
-                    <button data-lang="id">🇮🇩</button>
-                    <button data-lang="de">🇩🇪</button>
+                    <button type="button" data-language="nl">
+                        🇳🇱
+                        <span>Nederlands</span>
+                    </button>
+
+                    <button type="button" data-language="en">
+                        🇬🇧
+                        <span>English</span>
+                    </button>
+
+                    <button type="button" data-language="de">
+                        🇩🇪
+                        <span>Deutsch</span>
+                    </button>
+
+                    <button type="button" data-language="fr">
+                        🇫🇷
+                        <span>Français</span>
+                    </button>
+
+                    <button type="button" data-language="es">
+                        🇪🇸
+                        <span>Español</span>
+                    </button>
+
+                    <button type="button" data-language="it">
+                        🇮🇹
+                        <span>Italiano</span>
+                    </button>
+
+                    <button type="button" data-language="pt">
+                        🇵🇹
+                        <span>Português</span>
+                    </button>
+
+                    <button type="button" data-language="zh">
+                        🇨🇳
+                        <span>中文</span>
+                    </button>
+
+                    <button type="button" data-language="ja">
+                        🇯🇵
+                        <span>日本語</span>
+                    </button>
+
+                    <button type="button" data-language="ko">
+                        🇰🇷
+                        <span>한국어</span>
+                    </button>
+
+                    <button type="button" data-language="ar">
+                        🇸🇦
+                        <span>العربية</span>
+                    </button>
+
+                    <button type="button" data-language="ru">
+                        🇷🇺
+                        <span>Русский</span>
+                    </button>
 
                 </div>
 
@@ -101,633 +117,134 @@
 </header>
 
 
-
 <main class="info-page">
 
-
-    <a
-        href="index.html"
-        class="back"
-        data-i18n="back"
-    >
-        ← Terug
+    <a href="index.html" class="back">
+        ←
     </a>
 
 
-    <section class="info-content">
+    <section class="info-hero">
+
+        <span class="eyebrow" data-i18n="infoEyebrow">
+            OUR APPROACH
+        </span>
+
+        <h1 data-i18n="infoTitle">
+            Zorg in ieder detail.
+        </h1>
+
+        <p data-i18n="infoIntro">
+            Jarenlange productkennis, zorgvuldige verwerking en
+            uitzonderlijk goede verzendmethoden vormen de basis
+            van iedere bestelling.
+        </p>
+
+    </section>
 
 
-        <div class="info-intro">
-
-            <h1 data-i18n="title">
-                Zorg in ieder detail
-            </h1>
-
-            <p
-                class="info-lead"
-                data-i18n="intro"
-            >
-                Ieder product wordt met aandacht geselecteerd,
-                gecontroleerd en voorbereid voor verzending.
-            </p>
-
-        </div>
+    <section class="info-grid">
 
 
+        <article class="info-card">
 
-        <div class="info-grid">
+            <span class="info-number">
+                01
+            </span>
 
-
-            <article>
-
-                <span class="info-number">
-                    01
-                </span>
-
-                <h2 data-i18n="careTitle">
-                    Zorgvuldig behandeld
-                </h2>
-
-                <p data-i18n="careText">
-                    Al onze producten worden met grote
-                    zorg behandeld. Vanaf het moment dat
-                    een product binnenkomt tot het moment
-                    waarop het wordt verzonden, besteden
-                    we aandacht aan ieder detail.
-                </p>
-
-            </article>
-
-
-
-            <article>
-
-                <span class="info-number">
-                    02
-                </span>
-
-                <h2 data-i18n="experienceTitle">
-                    Jarenlange productkennis
-                </h2>
-
-                <p data-i18n="experienceText">
-                    Door jarenlange ervaring beschikken we
-                    over uitgebreide kennis van onze producten.
-                    Hierdoor weten we hoe verschillende
-                    producten moeten worden behandeld,
-                    beschermd en verzonden.
-                </p>
-
-            </article>
-
-
-
-            <article>
-
-                <span class="info-number">
-                    03
-                </span>
-
-                <h2 data-i18n="packingTitle">
-                    Secuur verpakt
-                </h2>
-
-                <p data-i18n="packingText">
-                    Voor iedere verzending gebruiken we
-                    passende en betrouwbare verpakkingsmethoden.
-                    Het doel is eenvoudig: het product moet
-                    dezelfde aandacht krijgen tijdens het
-                    transport als daarvoor.
-                </p>
-
-            </article>
-
-
-
-            <article>
-
-                <span class="info-number">
-                    04
-                </span>
-
-                <h2 data-i18n="shippingTitle">
-                    Betrouwbare verzending
-                </h2>
-
-                <p data-i18n="shippingText">
-                    We gebruiken uitzonderlijk zorgvuldige
-                    verzendmethoden om de kans op schade
-                    tijdens transport zo klein mogelijk te maken.
-                </p>
-
-            </article>
-
-
-
-        </div>
-
-
-
-        <div class="info-bottom">
-
-            <h2 data-i18n="euTitle">
-                Aankomst binnen de EU
+            <h2 data-i18n="infoCard1Title">
+                Zorgvuldig verpakt
             </h2>
 
-            <p data-i18n="euText">
-                Voor verzending binnen de Europese Unie
-                streven we naar een veilige en betrouwbare
-                levering. Iedere bestelling wordt voorbereid
-                met dezelfde zorg waarmee we onze producten
-                selecteren en behandelen.
+            <p data-i18n="infoCard1Text">
+                Ieder product wordt met aandacht gecontroleerd
+                en zorgvuldig verpakt. We nemen de tijd om ervoor
+                te zorgen dat het product veilig en verzorgd aan
+                zijn reis begint.
             </p>
 
-        </div>
+        </article>
 
+
+        <article class="info-card">
+
+            <span class="info-number">
+                02
+            </span>
+
+            <h2 data-i18n="infoCard2Title">
+                Productkennis
+            </h2>
+
+            <p data-i18n="infoCard2Text">
+                Dankzij jarenlange ervaring beschikken we over
+                uitgebreide kennis van onze producten. Hierdoor
+                weten we hoe verschillende producten het beste
+                behandeld, beschermd en verzonden kunnen worden.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <span class="info-number">
+                03
+            </span>
+
+            <h2 data-i18n="infoCard3Title">
+                Verzendmethoden
+            </h2>
+
+            <p data-i18n="infoCard3Text">
+                We gebruiken zorgvuldig geselecteerde
+                verpakkings- en verzendmethoden die zijn gericht
+                op maximale bescherming tijdens transport.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <span class="info-number">
+                04
+            </span>
+
+            <h2 data-i18n="infoCard4Title">
+                EU levering
+            </h2>
+
+            <p data-i18n="infoCard4Text">
+                Voor leveringen binnen de Europese Unie streven
+                we naar een betrouwbare en zorgvuldige aankomst.
+                Iedere zending wordt met dezelfde aandacht
+                behandeld, van vertrek tot bestemming.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+    <section class="info-statement">
+
+        <span class="eyebrow" data-i18n="infoStatementEyebrow">
+            OUR PROMISE
+        </span>
+
+        <h2 data-i18n="infoStatement">
+            Niet alleen een product versturen.
+            Het goed aankomen is onderdeel van onze service.
+        </h2>
 
     </section>
 
 </main>
 
 
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        const translations = {
-
-            nl: {
-
-                showroom: "Showroom",
-                info: "Info",
-                back: "← Terug",
-
-                title:
-                    "Zorg in ieder detail",
-
-                intro:
-                    "Ieder product wordt met aandacht geselecteerd, gecontroleerd en voorbereid voor verzending.",
-
-                careTitle:
-                    "Zorgvuldig behandeld",
-
-                careText:
-                    "Al onze producten worden met grote zorg behandeld. Vanaf het moment dat een product binnenkomt tot het moment waarop het wordt verzonden, besteden we aandacht aan ieder detail.",
-
-                experienceTitle:
-                    "Jarenlange productkennis",
-
-                experienceText:
-                    "Door jarenlange ervaring beschikken we over uitgebreide kennis van onze producten. Hierdoor weten we hoe verschillende producten moeten worden behandeld, beschermd en verzonden.",
-
-                packingTitle:
-                    "Secuur verpakt",
-
-                packingText:
-                    "Voor iedere verzending gebruiken we passende en betrouwbare verpakkingsmethoden. Het doel is eenvoudig: het product moet dezelfde aandacht krijgen tijdens het transport als daarvoor.",
-
-                shippingTitle:
-                    "Betrouwbare verzending",
-
-                shippingText:
-                    "We gebruiken uitzonderlijk zorgvuldige verzendmethoden om de kans op schade tijdens transport zo klein mogelijk te maken.",
-
-                euTitle:
-                    "Aankomst binnen de EU",
-
-                euText:
-                    "Voor verzending binnen de Europese Unie streven we naar een veilige en betrouwbare levering. Iedere bestelling wordt voorbereid met dezelfde zorg waarmee we onze producten selecteren en behandelen."
-
-            },
-
-
-            en: {
-
-                showroom: "Showroom",
-                info: "Info",
-                back: "← Back",
-
-                title:
-                    "Care in every detail",
-
-                intro:
-                    "Every product is carefully selected, inspected and prepared for shipment.",
-
-                careTitle:
-                    "Handled with care",
-
-                careText:
-                    "Every product is handled with great care. From the moment it arrives until the moment it is shipped, attention is given to every detail.",
-
-                experienceTitle:
-                    "Years of product knowledge",
-
-                experienceText:
-                    "Years of experience have given us extensive knowledge of our products. This allows us to understand how different products should be handled, protected and shipped.",
-
-                packingTitle:
-                    "Carefully packaged",
-
-                packingText:
-                    "For every shipment we use appropriate and reliable packaging methods. The goal is simple: the product should receive the same level of care during transport as it did beforehand.",
-
-                shippingTitle:
-                    "Reliable shipping",
-
-                shippingText:
-                    "We use exceptionally careful shipping methods to minimise the risk of damage during transportation.",
-
-                euTitle:
-                    "Delivery within the EU",
-
-                euText:
-                    "For shipments within the European Union, we aim for safe and reliable delivery. Every order is prepared with the same care with which we select and handle our products."
-
-            },
-
-
-            zh: {
-
-                showroom: "展厅",
-                info: "信息",
-                back: "← 返回",
-
-                title: "注重每一个细节",
-                intro: "每件产品都会经过仔细挑选、检查并精心准备后再进行运输。",
-                careTitle: "细心处理",
-                careText: "从产品到达的那一刻起，直到交付运输，每一个细节都会受到认真关注。",
-                experienceTitle: "多年的产品经验",
-                experienceText: "多年的经验让我们积累了丰富的产品知识，能够正确地处理、保护和运输不同类型的产品。",
-                packingTitle: "精心包装",
-                packingText: "我们根据不同产品采用合适可靠的包装方式，尽可能确保产品在运输过程中得到充分保护。",
-                shippingTitle: "可靠运输",
-                shippingText: "我们采用特别谨慎的运输方式，尽可能降低运输过程中发生损坏的风险。",
-                euTitle: "欧盟境内配送",
-                euText: "对于欧盟境内的运输，我们致力于提供安全可靠的配送服务。"
-
-            },
-
-
-            hi: {
-
-                showroom: "शोरूम",
-                info: "जानकारी",
-                back: "← वापस",
-
-                title: "हर विवरण में सावधानी",
-                intro: "हर उत्पाद को सावधानीपूर्वक चुना, जांचा और शिपमेंट के लिए तैयार किया जाता है।",
-                careTitle: "सावधानी से संभाला जाता है",
-                careText: "उत्पाद प्राप्त होने से लेकर भेजे जाने तक हर चरण में विशेष ध्यान दिया जाता है।",
-                experienceTitle: "वर्षों का उत्पाद अनुभव",
-                experienceText: "वर्षों के अनुभव से हमें अपने उत्पादों की गहरी समझ प्राप्त हुई है।",
-                packingTitle: "सावधानीपूर्वक पैकिंग",
-                packingText: "हर शिपमेंट के लिए उपयुक्त और विश्वसनीय पैकेजिंग विधियों का उपयोग किया जाता है।",
-                shippingTitle: "विश्वसनीय शिपिंग",
-                shippingText: "हम परिवहन के दौरान नुकसान के जोखिम को कम करने के लिए अत्यंत सावधानीपूर्वक शिपिंग विधियों का उपयोग करते हैं।",
-                euTitle: "EU के भीतर डिलीवरी",
-                euText: "यूरोपीय संघ के भीतर हम सुरक्षित और विश्वसनीय डिलीवरी का लक्ष्य रखते हैं।"
-
-            },
-
-
-            es: {
-
-                showroom: "Sala de exposición",
-                info: "Información",
-                back: "← Volver",
-
-                title: "Cuidado en cada detalle",
-                intro: "Cada producto se selecciona, revisa y prepara cuidadosamente para su envío.",
-                careTitle: "Tratado con cuidado",
-                careText: "Cada producto recibe una atención especial desde su llegada hasta el momento del envío.",
-                experienceTitle: "Años de experiencia",
-                experienceText: "Años de experiencia nos han proporcionado un amplio conocimiento de nuestros productos.",
-                packingTitle: "Embalaje cuidadoso",
-                packingText: "Utilizamos métodos de embalaje adecuados y fiables para cada envío.",
-                shippingTitle: "Envío fiable",
-                shippingText: "Utilizamos métodos de envío especialmente cuidadosos para minimizar el riesgo de daños.",
-                euTitle: "Entrega dentro de la UE",
-                euText: "Para los envíos dentro de la Unión Europea buscamos ofrecer una entrega segura y fiable."
-
-            },
-
-
-            fr: {
-
-                showroom: "Showroom",
-                info: "Informations",
-                back: "← Retour",
-
-                title: "Le soin dans chaque détail",
-                intro: "Chaque produit est soigneusement sélectionné, contrôlé et préparé pour son expédition.",
-                careTitle: "Manipulé avec soin",
-                careText: "Chaque produit est traité avec une grande attention, de sa réception jusqu'à son expédition.",
-                experienceTitle: "Des années d'expérience",
-                experienceText: "Notre expérience nous permet de disposer d'une connaissance approfondie de nos produits.",
-                packingTitle: "Emballage soigné",
-                packingText: "Nous utilisons des méthodes d'emballage adaptées et fiables pour chaque envoi.",
-                shippingTitle: "Expédition fiable",
-                shippingText: "Nous utilisons des méthodes d'expédition particulièrement soigneuses afin de réduire les risques de dommages.",
-                euTitle: "Livraison dans l'UE",
-                euText: "Pour les livraisons au sein de l'Union européenne, nous visons une livraison sûre et fiable."
-
-            },
-
-
-            ar: {
-
-                showroom: "المعرض",
-                info: "معلومات",
-                back: "← رجوع",
-
-                title: "العناية بكل التفاصيل",
-                intro: "يتم اختيار كل منتج وفحصه وتجهيزه للشحن بعناية.",
-                careTitle: "معاملة بعناية",
-                careText: "يتم التعامل مع كل منتج بعناية كبيرة من لحظة وصوله وحتى شحنه.",
-                experienceTitle: "سنوات من الخبرة",
-                experienceText: "منحتنا سنوات الخبرة معرفة واسعة بمنتجاتنا وكيفية التعامل معها وحمايتها وشحنها.",
-                packingTitle: "تغليف دقيق",
-                packingText: "نستخدم طرق تغليف مناسبة وموثوقة لكل شحنة.",
-                shippingTitle: "شحن موثوق",
-                shippingText: "نستخدم طرق شحن دقيقة للغاية لتقليل مخاطر التلف أثناء النقل.",
-                euTitle: "التوصيل داخل الاتحاد الأوروبي",
-                euText: "بالنسبة للشحن داخل الاتحاد الأوروبي، نسعى إلى توفير توصيل آمن وموثوق."
-
-            },
-
-
-            bn: {
-
-                showroom: "শোরুম",
-                info: "তথ্য",
-                back: "← ফিরে যান",
-
-                title: "প্রতিটি বিবরণে যত্ন",
-                intro: "প্রতিটি পণ্য যত্নসহকারে নির্বাচন, পরীক্ষা এবং পাঠানোর জন্য প্রস্তুত করা হয়।",
-                careTitle: "যত্নসহকারে পরিচালিত",
-                careText: "পণ্য আসার মুহূর্ত থেকে পাঠানো পর্যন্ত প্রতিটি ধাপে বিশেষ যত্ন নেওয়া হয়।",
-                experienceTitle: "বহু বছরের অভিজ্ঞতা",
-                experienceText: "বহু বছরের অভিজ্ঞতা আমাদের পণ্য সম্পর্কে গভীর জ্ঞান দিয়েছে।",
-                packingTitle: "সযত্নে প্যাক করা",
-                packingText: "প্রতিটি চালানের জন্য উপযুক্ত ও নির্ভরযোগ্য প্যাকেজিং পদ্ধতি ব্যবহার করা হয়।",
-                shippingTitle: "নির্ভরযোগ্য শিপিং",
-                shippingText: "পরিবহনের সময় ক্ষতির ঝুঁকি কমাতে আমরা অত্যন্ত সতর্ক শিপিং পদ্ধতি ব্যবহার করি।",
-                euTitle: "EU-এর মধ্যে ডেলিভারি",
-                euText: "ইউরোপীয় ইউনিয়নের মধ্যে আমরা নিরাপদ ও নির্ভরযোগ্য ডেলিভারি নিশ্চিত করার লক্ষ্য রাখি।"
-
-            },
-
-
-            pt: {
-
-                showroom: "Showroom",
-                info: "Informações",
-                back: "← Voltar",
-
-                title: "Cuidado em cada detalhe",
-                intro: "Cada produto é cuidadosamente selecionado, verificado e preparado para envio.",
-                careTitle: "Manuseado com cuidado",
-                careText: "Cada produto é tratado com grande cuidado desde a sua chegada até ao momento do envio.",
-                experienceTitle: "Anos de experiência",
-                experienceText: "Anos de experiência proporcionaram-nos um conhecimento profundo dos nossos produtos.",
-                packingTitle: "Embalagem cuidadosa",
-                packingText: "Utilizamos métodos de embalagem adequados e fiáveis para cada envio.",
-                shippingTitle: "Envio fiável",
-                shippingText: "Utilizamos métodos de envio especialmente cuidadosos para minimizar o risco de danos.",
-                euTitle: "Entrega na UE",
-                euText: "Para envios dentro da União Europeia, procuramos oferecer uma entrega segura e fiável."
-
-            },
-
-
-            ru: {
-
-                showroom: "Шоурум",
-                info: "Информация",
-                back: "← Назад",
-
-                title: "Внимание к каждой детали",
-                intro: "Каждый продукт тщательно выбирается, проверяется и подготавливается к отправке.",
-                careTitle: "Бережное обращение",
-                careText: "Каждый продукт бережно обрабатывается с момента получения до момента отправки.",
-                experienceTitle: "Многолетний опыт",
-                experienceText: "Многолетний опыт позволил нам приобрести глубокие знания о наших продуктах.",
-                packingTitle: "Тщательная упаковка",
-                packingText: "Для каждой отправки мы используем подходящие и надёжные методы упаковки.",
-                shippingTitle: "Надёжная доставка",
-                shippingText: "Мы используем особенно аккуратные способы доставки, чтобы минимизировать риск повреждений.",
-                euTitle: "Доставка по ЕС",
-                euText: "Для отправлений внутри Европейского союза мы стремимся обеспечить безопасную и надёжную доставку."
-
-            },
-
-
-            id: {
-
-                showroom: "Ruang Pamer",
-                info: "Info",
-                back: "← Kembali",
-
-                title: "Perhatian pada setiap detail",
-                intro: "Setiap produk dipilih, diperiksa, dan dipersiapkan dengan cermat sebelum dikirim.",
-                careTitle: "Ditangani dengan hati-hati",
-                careText: "Setiap produk ditangani dengan sangat hati-hati sejak diterima hingga dikirim.",
-                experienceTitle: "Pengalaman bertahun-tahun",
-                experienceText: "Pengalaman bertahun-tahun memberi kami pengetahuan mendalam tentang produk kami.",
-                packingTitle: "Dikemas dengan cermat",
-                packingText: "Kami menggunakan metode pengemasan yang sesuai dan dapat diandalkan untuk setiap pengiriman.",
-                shippingTitle: "Pengiriman terpercaya",
-                shippingText: "Kami menggunakan metode pengiriman yang sangat hati-hati untuk mengurangi risiko kerusakan.",
-                euTitle: "Pengiriman di dalam UE",
-                euText: "Untuk pengiriman di dalam Uni Eropa, kami mengutamakan pengiriman yang aman dan dapat diandalkan."
-
-            },
-
-
-            de: {
-
-                showroom: "Showroom",
-                info: "Info",
-                back: "← Zurück",
-
-                title: "Sorgfalt in jedem Detail",
-                intro: "Jedes Produkt wird sorgfältig ausgewählt, geprüft und für den Versand vorbereitet.",
-                careTitle: "Sorgfältig behandelt",
-                careText: "Jedes Produkt wird vom Eingang bis zum Versand mit großer Sorgfalt behandelt.",
-                experienceTitle: "Jahrelange Erfahrung",
-                experienceText: "Jahrelange Erfahrung hat uns umfassende Kenntnisse über unsere Produkte vermittelt.",
-                packingTitle: "Sorgfältig verpackt",
-                packingText: "Für jeden Versand verwenden wir geeignete und zuverlässige Verpackungsmethoden.",
-                shippingTitle: "Zuverlässiger Versand",
-                shippingText: "Wir verwenden besonders sorgfältige Versandmethoden, um das Risiko von Transportschäden zu minimieren.",
-                euTitle: "Lieferung innerhalb der EU",
-                euText: "Für Lieferungen innerhalb der Europäischen Union streben wir eine sichere und zuverlässige Zustellung an."
-
-            }
-
-        };
-
-
-        const flags = {
-
-            nl: "🇳🇱",
-            en: "🇬🇧",
-            zh: "🇨🇳",
-            hi: "🇮🇳",
-            es: "🇪🇸",
-            fr: "🇫🇷",
-            ar: "🇸🇦",
-            bn: "🇧🇩",
-            pt: "🇵🇹",
-            ru: "🇷🇺",
-            id: "🇮🇩",
-            de: "🇩🇪"
-
-        };
-
-
-        let language =
-            localStorage.getItem(
-                "language"
-            ) || "nl";
-
-
-        function applyLanguage(lang) {
-
-            if (!translations[lang]) {
-                lang = "nl";
-            }
-
-
-            language = lang;
-
-
-            localStorage.setItem(
-                "language",
-                language
-            );
-
-
-            document.documentElement.lang =
-                language;
-
-
-            document
-                .querySelectorAll("[data-i18n]")
-                .forEach(function (element) {
-
-                    const key =
-                        element.dataset.i18n;
-
-
-                    if (
-                        translations[language][key]
-                    ) {
-
-                        element.textContent =
-                            translations[language][key];
-
-                    }
-
-                });
-
-
-            document.getElementById(
-                "currentFlag"
-            ).textContent =
-                flags[language];
-
-        }
-
-
-        const languageButton =
-            document.getElementById(
-                "languageButton"
-            );
-
-
-        const languageMenu =
-            document.getElementById(
-                "languageMenu"
-            );
-
-
-        languageButton.addEventListener(
-            "click",
-            function (event) {
-
-                event.stopPropagation();
-
-
-                const isOpen =
-                    languageMenu.classList.toggle(
-                        "open"
-                    );
-
-
-                languageButton.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                );
-
-            }
-        );
-
-
-        languageMenu
-            .querySelectorAll("button")
-            .forEach(
-                function (button) {
-
-                    button.addEventListener(
-                        "click",
-                        function () {
-
-                            applyLanguage(
-                                button.dataset.lang
-                            );
-
-
-                            languageMenu.classList.remove(
-                                "open"
-                            );
-
-
-                            languageButton.setAttribute(
-                                "aria-expanded",
-                                "false"
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-
-        document.addEventListener(
-            "click",
-            function () {
-
-                languageMenu.classList.remove(
-                    "open"
-                );
-
-            }
-        );
-
-
-        applyLanguage(language);
-
-    }
-
-);
-
-</script>
+<script src="language.js"></script>
 
 </body>
 </html>
