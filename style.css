@@ -1536,8 +1536,6 @@ background 0.3s ease,
 
 }
 
-dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
-
 /* =================================
    MOBILE-FIRST INTERACTION FIXES
    ================================= */
@@ -2114,4 +2112,47 @@ nav {
         max-height: 100px;
         flex: 0 0 100px;
     }
+}
+/* =================================
+   TAAL + VALUTA ZONDER KADER
+   ================================= */
+
+.language-button,
+.currency-button {
+    width: auto !important;
+    min-width: auto !important;
+    height: auto !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+}
+
+/* Geen kader bij hover */
+.language-button:hover,
+.currency-button:hover {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+/* Pijltjes */
+.language-arrow,
+.currency-arrow {
+    color: #ffd400;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+/* Alleen op het pijltje reageren */
+.language-button,
+.currency-button {
+    cursor: pointer;
 }
