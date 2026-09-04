@@ -1781,14 +1781,14 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
 .logo img {
     display: block;
 
-    width: 22px;
-    height: 22px;
+    width: 222px;
+    height: 222px;
 
-    max-width: 22px;
-    max-height: 22px;
+    max-width: 222px;
+    max-height: 222px;
 
     object-fit: contain;
-    flex: 0 0 22px;
+    flex: 0 0 222px;
 }
 
 .logo span {
@@ -1810,13 +1810,13 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
     }
 
     .logo img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
 
-        max-width: 60px;
-        max-height: 60px;
+        max-width:100px;
+        max-height: 100px;
 
-        flex: 0 0 60px;
+        flex: 0 0 100px;
     }
 
 }
