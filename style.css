@@ -1781,14 +1781,14 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
 .logo img {
     display: block;
 
-    width: 222px;
-    height: 222px;
+    width: 100px;
+    height: 100px;
 
-    max-width: 222px;
-    max-height: 222px;
+    max-width: 100px;
+    max-height: 100px;
 
     object-fit: contain;
-    flex: 0 0 222px;
+    flex: 0 0 100px;
 }
 
 .logo span {
