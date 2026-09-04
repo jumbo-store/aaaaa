@@ -1488,6 +1488,7 @@ background 0.3s ease,
 
 }
 
+dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
 
 /* =================================
    MOBILE-FIRST INTERACTION FIXES
@@ -1627,5 +1628,124 @@ background 0.3s ease,
     .language-button {
         width: 42px;
         min-width: 42px;
+    }
+}
+
+/* =================================
+   FINAL MOBILE / TOUCH POLISH
+   ================================= */
+
+/* Back button: circular icon + translated label */
+.back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 42px;
+    width: auto;
+    padding: 0 14px 0 0;
+    border: 0;
+    color: #888;
+}
+
+.back-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: #888;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0;
+    transform: translateY(-1px);
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.back-label {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.back:hover {
+    color: #ffd400;
+    border-color: transparent;
+}
+
+.back:hover .back-icon {
+    color: #ffd400;
+    border-color: rgba(255, 212, 0, 0.55);
+    background: rgba(255, 212, 0, 0.04);
+}
+
+.back:hover .back-label {
+    color: #ffd400;
+}
+
+/* Gallery arrows: use a flex-centered glyph so the arrow cannot sit low/high */
+.gallery-arrow {
+    border-radius: 50%;
+    padding: 0 !important;
+    line-height: 0;
+    font-size: 0;
+}
+
+.gallery-arrow::before {
+    display: block;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #ffd400;
+    transform: translateY(-1px);
+}
+
+.gallery-arrow-left::before {
+    content: "‹";
+}
+
+.gallery-arrow-right::before {
+    content: "›";
+}
+
+@media (max-width: 700px) {
+    .back {
+        min-height: 44px;
+        gap: 9px;
+        padding-right: 10px;
+    }
+
+    .back-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        font-size: 22px;
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .back-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .gallery-arrow {
+        width: 46px !important;
+        height: 46px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+    }
+
+    .gallery-arrow::before {
+        font-size: 30px;
+        transform: translateY(-1px);
     }
 }

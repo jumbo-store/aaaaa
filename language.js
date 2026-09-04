@@ -8,6 +8,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Info",
+        backLabel: "Terug",
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -66,6 +67,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Info",
+        backLabel: "Back",
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -124,6 +126,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Info",
+        backLabel: "Zurück",
 
         showroomEyebrow: "AUSGEWÄHLTE KOLLEKTION",
         showroomTitle: "Showroom",
@@ -182,6 +185,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Info",
+        backLabel: "Retour",
 
         showroomEyebrow: "COLLECTION SÉLECTIONNÉE",
         showroomTitle: "Showroom",
@@ -240,6 +244,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Información",
+        backLabel: "Atrás",
 
         showroomEyebrow: "COLECCIÓN SELECCIONADA",
         showroomTitle: "Showroom",
@@ -298,6 +303,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Info",
+        backLabel: "Indietro",
 
         showroomEyebrow: "COLLEZIONE SELEZIONATA",
         showroomTitle: "Showroom",
@@ -356,6 +362,7 @@ const translations = {
 
         navShowroom: "Showroom",
         navInfo: "Informação",
+        backLabel: "Voltar",
 
         showroomEyebrow: "COLEÇÃO SELECIONADA",
         showroomTitle: "Showroom",
@@ -414,6 +421,7 @@ const translations = {
 
         navShowroom: "展厅",
         navInfo: "信息",
+        backLabel: "返回",
 
         showroomEyebrow: "精选系列",
         showroomTitle: "展厅",
@@ -472,6 +480,7 @@ const translations = {
 
         navShowroom: "ショールーム",
         navInfo: "情報",
+        backLabel: "戻る",
 
         showroomEyebrow: "厳選されたコレクション",
         showroomTitle: "ショールーム",
@@ -530,6 +539,7 @@ const translations = {
 
         navShowroom: "쇼룸",
         navInfo: "정보",
+        backLabel: "뒤로",
 
         showroomEyebrow: "엄선된 컬렉션",
         showroomTitle: "쇼룸",
@@ -588,6 +598,7 @@ const translations = {
 
         navShowroom: "المعرض",
         navInfo: "معلومات",
+        backLabel: "العودة",
 
         showroomEyebrow: "مجموعة مختارة",
         showroomTitle: "المعرض",
@@ -646,6 +657,7 @@ const translations = {
 
         navShowroom: "Шоурум",
         navInfo: "Информация",
+        backLabel: "Назад",
 
         showroomEyebrow: "ИЗБРАННАЯ КОЛЛЕКЦИЯ",
         showroomTitle: "Шоурум",
