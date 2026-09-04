@@ -2,10 +2,12 @@ const products = [
 
     {
         id: 1,
-        name: "Product 1",
-        unitType: "eenheid",
+        name: "Cola 1",
+        unitType: "Gram",
         prices: [
-            { quantity: 1, priceEUR: 49 }
+            { quantity: 1, priceEUR: 70 },
+            { quantity: 3, priceEUR: 190 },
+            { quantity: 5, priceEUR: 300 },
             // Voeg hier eenvoudig meer staffels toe:
             // , { quantity: 2, priceEUR: 90 }
             // , { quantity: 3, priceEUR: 130 }
