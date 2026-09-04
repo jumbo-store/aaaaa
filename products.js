@@ -7,10 +7,8 @@ const products = [
         prices: [
             { quantity: 1, priceEUR: 70 },
             { quantity: 3, priceEUR: 190 },
-            { quantity: 5, priceEUR: 300 },
+            { quantity: 5, priceEUR: 300 }
             // Voeg hier eenvoudig meer staffels toe:
-            // , { quantity: 2, priceEUR: 90 }
-            // , { quantity: 3, priceEUR: 130 }
         ],
 
         description: {

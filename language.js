@@ -12,6 +12,8 @@ const translations = {
 
         currencyLabel: "Valuta",
         priceListTitle: "Prijslijst",
+        fromLabel: "Vanaf",
+        perUnitLabel: "per",
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -74,6 +76,8 @@ const translations = {
 
         currencyLabel: "Currency",
         priceListTitle: "Price list",
+        fromLabel: "From",
+        perUnitLabel: "per",
 
         showroomEyebrow: "SELECTED COLLECTION",
         showroomTitle: "Showroom",
@@ -136,6 +140,8 @@ const translations = {
 
         currencyLabel: "Währung",
         priceListTitle: "Preisliste",
+        fromLabel: "Ab",
+        perUnitLabel: "pro",
 
         showroomEyebrow: "AUSGEWÄHLTE KOLLEKTION",
         showroomTitle: "Showroom",
@@ -198,6 +204,8 @@ const translations = {
 
         currencyLabel: "Devise",
         priceListTitle: "Tarifs",
+        fromLabel: "À partir de",
+        perUnitLabel: "par",
 
         showroomEyebrow: "COLLECTION SÉLECTIONNÉE",
         showroomTitle: "Showroom",
@@ -260,6 +268,8 @@ const translations = {
 
         currencyLabel: "Moneda",
         priceListTitle: "Lista de precios",
+        fromLabel: "Desde",
+        perUnitLabel: "por",
 
         showroomEyebrow: "COLECCIÓN SELECCIONADA",
         showroomTitle: "Showroom",
@@ -322,6 +332,8 @@ const translations = {
 
         currencyLabel: "Valuta",
         priceListTitle: "Listino prezzi",
+        fromLabel: "A partire da",
+        perUnitLabel: "per",
 
         showroomEyebrow: "COLLEZIONE SELEZIONATA",
         showroomTitle: "Showroom",
@@ -384,6 +396,8 @@ const translations = {
 
         currencyLabel: "Moeda",
         priceListTitle: "Tabela de preços",
+        fromLabel: "A partir de",
+        perUnitLabel: "por",
 
         showroomEyebrow: "COLEÇÃO SELECIONADA",
         showroomTitle: "Showroom",
@@ -446,6 +460,8 @@ const translations = {
 
         currencyLabel: "货币",
         priceListTitle: "价格表",
+        fromLabel: "起价",
+        perUnitLabel: "每",
 
         showroomEyebrow: "精选系列",
         showroomTitle: "展厅",
@@ -508,6 +524,8 @@ const translations = {
 
         currencyLabel: "通貨",
         priceListTitle: "価格表",
+        fromLabel: "から",
+        perUnitLabel: "あたり",
 
         showroomEyebrow: "厳選されたコレクション",
         showroomTitle: "ショールーム",
@@ -570,6 +588,8 @@ const translations = {
 
         currencyLabel: "통화",
         priceListTitle: "가격표",
+        fromLabel: "최저",
+        perUnitLabel: "당",
 
         showroomEyebrow: "엄선된 컬렉션",
         showroomTitle: "쇼룸",
@@ -632,6 +652,8 @@ const translations = {
 
         currencyLabel: "العملة",
         priceListTitle: "قائمة الأسعار",
+        fromLabel: "يبدأ من",
+        perUnitLabel: "لكل",
 
         showroomEyebrow: "مجموعة مختارة",
         showroomTitle: "المعرض",
@@ -694,6 +716,8 @@ const translations = {
 
         currencyLabel: "Валюта",
         priceListTitle: "Прайс-лист",
+        fromLabel: "От",
+        perUnitLabel: "за",
 
         showroomEyebrow: "ИЗБРАННАЯ КОЛЛЕКЦИЯ",
         showroomTitle: "Шоурум",

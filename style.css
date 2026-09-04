@@ -1536,6 +1536,8 @@ background 0.3s ease,
 
 }
 
+dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
+
 /* =================================
    MOBILE-FIRST INTERACTION FIXES
    ================================= */
@@ -1990,6 +1992,53 @@ background 0.3s ease,
     color: #ffd400;
     font-size: 14px;
     font-weight: 500;
+}
+
+
+/* Prijzenlijst: totaalprijs + prijs per eenheid */
+.pricing-price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    text-align: right;
+}
+
+.pricing-price strong {
+    color: #ffd400;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pricing-price small {
+    color: #777;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .pricing-row {
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .pricing-quantity {
+        font-size: 12px;
+    }
+
+    .pricing-price {
+        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .pricing-price strong {
+        font-size: 13px;
+    }
+
+    .pricing-price small {
+        font-size: 9px;
+    }
 }
 
 /* =================================

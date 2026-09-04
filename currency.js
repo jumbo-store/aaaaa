@@ -49,9 +49,25 @@ function updateCurrencyUI() {
             const item = products.find(function(product) {
                 return Number(product.id) === id;
             });
-            const firstTier = item && Array.isArray(item.prices) ? item.prices[0] : null;
-            if (firstTier) {
-                element.textContent = formatCurrency(firstTier.priceEUR);
+            const tiers = item && Array.isArray(item.prices) ? item.prices : [];
+            if (tiers.length) {
+                const cheapestTier = tiers.reduce(function(lowest, tier) {
+                    const lowestUnitPrice = Number(lowest.priceEUR) / Math.max(1, Number(lowest.quantity));
+                    const tierUnitPrice = Number(tier.priceEUR) / Math.max(1, Number(tier.quantity));
+                    return tierUnitPrice < lowestUnitPrice ? tier : lowest;
+                }, tiers[0]);
+
+                const cheapestUnitPrice =
+                    Number(cheapestTier.priceEUR) /
+                    Math.max(1, Number(cheapestTier.quantity));
+
+                const language = localStorage.getItem("language") || "nl";
+                const languageData = typeof translations !== "undefined"
+                    ? (translations[language] || translations.en || {})
+                    : {};
+                const fromLabel = languageData.fromLabel || "From";
+
+                element.textContent = fromLabel + ": " + formatCurrency(cheapestUnitPrice);
             }
         });
     }
@@ -170,6 +186,10 @@ if (currencyButton && currencyMenu) {
         if (event.key === "Escape") closeCurrencyMenu();
     });
 }
+
+document.addEventListener("languageChanged", function() {
+    updateCurrencyUI();
+});
 
 window.getCurrency = getCurrency;
 window.formatCurrency = formatCurrency;
