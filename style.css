@@ -1,50 +1,75 @@
 /* =================================
+
    BASIS
-================================= */
+
+\================================= */
 
 * {
+
     box-sizing: border-box;
+
     margin: 0;
+
     padding: 0;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     background: #050505;
+
     color: #f5f5f5;
+
     font-family:
+
         Arial,
+
         Helvetica,
+
         sans-serif;
 
     min-height: 100vh;
+
 }
+
 
 
 /* =================================
+
    HEADER
-================================= */
+
+\================================= */
 
 .site-header {
+
     width: 100%;
 
     padding:
+
         26px 32px;
 
     border-bottom:
+
         1px solid rgba(255, 255, 255, 0.08);
 
     background:
+
         rgba(5, 5, 5, 0.96);
 
     position: relative;
+
     z-index: 100;
+
 }
 
 .nav {
+
     max-width: 1450px;
 
     margin: 0 auto;
@@ -52,12 +77,15 @@ body {
     display: flex;
 
     justify-content:
+
         space-between;
 
     align-items: center;
+
 }
 
 .logo {
+
     color: #ffd400;
 
     font-size: 20px;
@@ -67,17 +95,21 @@ body {
     letter-spacing: 4px;
 
     text-decoration: none;
+
 }
 
 nav {
+
     display: flex;
 
     align-items: center;
 
     gap: 32px;
+
 }
 
 nav > a {
+
     color: #aaa;
 
     text-decoration: none;
@@ -89,24 +121,35 @@ nav > a {
     text-transform: uppercase;
 
     transition:
+
         color 0.3s ease;
+
 }
 
 nav > a:hover {
+
     color: #ffd400;
+
 }
+
 
 
 /* =================================
+
    TAALMENU
-================================= */
+
+\================================= */
 
 .language {
+
     position: relative;
+
 }
 
 .language-button {
+
     width: 44px;
+
     height: 32px;
 
     display: flex;
@@ -118,9 +161,11 @@ nav > a:hover {
     gap: 5px;
 
     border:
+
         1px solid rgba(255, 212, 0, 0.45);
 
     background:
+
         rgba(255, 212, 0, 0.03);
 
     color: white;
@@ -128,18 +173,25 @@ nav > a:hover {
     cursor: pointer;
 
     transition:
+
         border-color 0.3s ease,
-        background 0.3s ease;
+
+background 0.3s ease;
+
 }
 
 .language-button:hover {
+
     border-color: #ffd400;
 
     background:
+
         rgba(255, 212, 0, 0.08);
+
 }
 
 .language-arrow {
+
     color: #ffd400;
 
     font-size: 13px;
@@ -147,10 +199,13 @@ nav > a:hover {
     line-height: 1;
 
     transform:
+
         translateY(-1px);
+
 }
 
 .language-menu {
+
     position: absolute;
 
     top: calc(100% + 12px);
@@ -164,10 +219,13 @@ nav > a:hover {
     background: #101010;
 
     border:
+
         1px solid rgba(255, 212, 0, 0.35);
 
     box-shadow:
+
         0 20px 50px
+
         rgba(0, 0, 0, 0.65);
 
     opacity: 0;
@@ -175,24 +233,33 @@ nav > a:hover {
     visibility: hidden;
 
     transform:
+
         translateY(-5px);
 
     transition:
+
         opacity 0.2s ease,
+
         transform 0.2s ease,
+
         visibility 0.2s ease;
+
 }
 
 .language-menu.open {
+
     opacity: 1;
 
     visibility: visible;
 
     transform:
+
         translateY(0);
+
 }
 
 .language-menu button {
+
     width: 100%;
 
     border: 0;
@@ -202,6 +269,7 @@ nav > a:hover {
     color: #ccc;
 
     padding:
+
         10px 12px;
 
     display: flex;
@@ -217,28 +285,39 @@ nav > a:hover {
     cursor: pointer;
 
     transition:
-        background 0.2s ease,
+
+background 0.2s ease,
+
         color 0.2s ease;
+
 }
 
 .language-menu button:hover {
+
     background:
+
         rgba(255, 212, 0, 0.08);
 
     color: #ffd400;
+
 }
 
 
+
 /* =================================
+
    SHOWROOM
-================================= */
+
+\================================= */
 
 .products {
+
     max-width: 1450px;
 
     margin: 0 auto;
 
     padding:
+
         80px 32px 120px;
 
     display: flex;
@@ -246,15 +325,19 @@ nav > a:hover {
     flex-direction: column;
 
     gap: 100px;
+
 }
 
 .showroom-intro {
+
     max-width: 700px;
 
     margin-bottom: 20px;
+
 }
 
 .eyebrow {
+
     display: block;
 
     color: #ffd400;
@@ -266,10 +349,13 @@ nav > a:hover {
     letter-spacing: 3px;
 
     margin-bottom: 18px;
+
 }
 
 .showroom-intro h1 {
+
     font-size:
+
         clamp(42px, 6vw, 76px);
 
     font-weight: 300;
@@ -277,41 +363,57 @@ nav > a:hover {
     letter-spacing: -2px;
 
     margin-bottom: 18px;
+
 }
 
 .showroom-intro p {
+
     color: #777;
 
     font-size: 14px;
 
     line-height: 1.8;
+
 }
 
 
+
 /* =================================
+
    PRODUCT RIJ
-================================= */
+
+\================================= */
 
 .product-row {
+
     display: grid;
 
     grid-template-columns:
+
         0.85fr
+
         1.5fr
+
         1.5fr
+
         0.85fr;
 
     align-items: center;
 
     gap: 28px;
+
 }
 
 .product-text {
+
     padding:
+
         20px 15px;
+
 }
 
 .product-number {
+
     display: block;
 
     color: #555;
@@ -321,9 +423,11 @@ nav > a:hover {
     letter-spacing: 3px;
 
     margin-bottom: 15px;
+
 }
 
 .product-text h2 {
+
     font-size: 17px;
 
     font-weight: 400;
@@ -331,17 +435,21 @@ nav > a:hover {
     letter-spacing: 1px;
 
     margin-bottom: 10px;
+
 }
 
 .product-text .price {
+
     color: #ffd400;
 
     font-size: 16px;
 
     font-weight: 500;
+
 }
 
 .product-text p {
+
     color: #777;
 
     font-size: 11px;
@@ -349,14 +457,19 @@ nav > a:hover {
     line-height: 1.6;
 
     margin-top: 12px;
+
 }
 
 
+
 /* =================================
+
    PRODUCT FOTO
-================================= */
+
+\================================= */
 
 .product-image {
+
     aspect-ratio: 1 / 1;
 
     position: relative;
@@ -368,13 +481,19 @@ nav > a:hover {
     justify-content: center;
 
     background:
+
         linear-gradient(
+
             145deg,
+
             #111,
+
             #080808
+
         );
 
     border:
+
         1px solid rgba(255, 212, 0, 0.25);
 
     overflow: hidden;
@@ -384,12 +503,17 @@ nav > a:hover {
     text-decoration: none;
 
     transition:
+
         transform 0.5s ease,
+
         border-color 0.5s ease,
+
         box-shadow 0.5s ease;
+
 }
 
 .product-image::before {
+
     content: "";
 
     position: absolute;
@@ -397,11 +521,15 @@ nav > a:hover {
     inset: 10px;
 
     border:
+
         1px solid
+
         rgba(255, 255, 255, 0.04);
+
 }
 
 .product-image span {
+
     position: relative;
 
     z-index: 2;
@@ -413,43 +541,61 @@ nav > a:hover {
     letter-spacing: 4px;
 
     transition:
+
         color 0.4s ease;
+
 }
 
 .product-image:hover {
+
     transform:
+
         translateY(-7px);
 
     border-color:
+
         rgba(255, 212, 0, 0.9);
 
     box-shadow:
+
         0 15px 45px
+
         rgba(0, 0, 0, 0.7),
 
         0 0 35px
+
         rgba(255, 212, 0, 0.10);
+
 }
 
 .product-image:hover span {
+
     color: #ffd400;
+
 }
 
 
+
 /* =================================
+
    PRODUCT PAGINA
-================================= */
+
+\================================= */
 
 .product-page {
+
     max-width: 1300px;
 
     margin: 0 auto;
 
     padding:
+
         45px 32px 120px;
+
 }
 
 .back {
+
     display: inline-flex;
 
     align-items: center;
@@ -457,6 +603,7 @@ nav > a:hover {
     justify-content: center;
 
     width: 40px;
+
     height: 40px;
 
     color: #888;
@@ -468,30 +615,43 @@ nav > a:hover {
     font-weight: 300;
 
     border:
+
         1px solid rgba(255, 255, 255, 0.08);
 
     transition:
+
         color 0.3s ease,
+
         border-color 0.3s ease;
+
 }
 
 .back:hover {
+
     color: #ffd400;
 
     border-color:
+
         rgba(255, 212, 0, 0.5);
+
 }
 
 
+
 /* =================================
+
    PRODUCT DETAIL
-================================= */
+
+\================================= */
 
 .product-detail {
+
     display: grid;
 
     grid-template-columns:
+
         minmax(0, 1.55fr)
+
         minmax(280px, 0.8fr);
 
     gap: 90px;
@@ -499,18 +659,25 @@ nav > a:hover {
     align-items: center;
 
     margin-top: 45px;
+
 }
+
 
 
 /* =================================
+
    GALERIJ
-================================= */
+
+\================================= */
 
 .gallery {
+
     width: 100%;
+
 }
 
 .gallery-window {
+
     position: relative;
 
     width: 100%;
@@ -520,16 +687,21 @@ nav > a:hover {
     overflow: hidden;
 
     border:
+
         1px solid #ffd400;
 
     background: #0a0a0a;
 
     box-shadow:
+
         0 0 30px
+
         rgba(255, 212, 0, 0.08);
+
 }
 
 .gallery-window::after {
+
     content: "";
 
     position: absolute;
@@ -539,20 +711,27 @@ nav > a:hover {
     pointer-events: none;
 
     border:
+
         1px solid
+
         rgba(255, 212, 0, 0.25);
 
     box-shadow:
+
         inset 0 0 40px
+
         rgba(255, 212, 0, 0.025);
 
     z-index: 5;
+
 }
 
 .gallery-track {
+
     display: flex;
 
     width: 100%;
+
     height: 100%;
 
     overflow-x: auto;
@@ -560,33 +739,45 @@ nav > a:hover {
     overflow-y: hidden;
 
     scroll-snap-type:
+
         x mandatory;
 
     scroll-behavior:
+
         smooth;
 
     touch-action:
+
         pan-x;
 
     scrollbar-width:
+
         none;
 
     -webkit-overflow-scrolling:
+
         touch;
+
 }
 
 .gallery-track::-webkit-scrollbar {
+
     display: none;
+
 }
 
 .gallery-slide {
+
     flex:
+
         0 0 100%;
 
     width: 100%;
+
     height: 100%;
 
     scroll-snap-align:
+
         start;
 
     display: flex;
@@ -596,10 +787,13 @@ nav > a:hover {
     justify-content: center;
 
     background: #080808;
+
 }
 
 .gallery-slide img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
@@ -611,34 +805,45 @@ nav > a:hover {
     -webkit-user-drag: none;
 
     pointer-events: none;
+
 }
 
 
+
 /* =================================
+
    GALERIJ PIJLEN
-================================= */
+
+\================================= */
 
 .gallery-arrow {
+
     position: absolute;
 
     top: 50%;
 
     transform:
+
         translateY(-50%);
 
     z-index: 10;
 
     width: 48px;
+
     height: 48px;
 
     border:
+
         1px solid
+
         rgba(255, 212, 0, 0.45);
 
     background:
+
         rgba(0, 0, 0, 0.48);
 
     backdrop-filter:
+
         blur(5px);
 
     color: #ffd400;
@@ -660,43 +865,61 @@ nav > a:hover {
     opacity: 0.65;
 
     transition:
+
         opacity 0.3s ease,
-        background 0.3s ease,
+
+background 0.3s ease,
+
         border-color 0.3s ease;
+
 }
 
 .gallery-arrow:hover {
+
     opacity: 1;
 
     background:
+
         rgba(0, 0, 0, 0.75);
 
     border-color:
+
         #ffd400;
+
 }
 
 .gallery-arrow:disabled {
+
     opacity: 0.15;
 
     cursor: default;
 
     pointer-events: none;
+
 }
 
 .gallery-arrow-left {
+
     left: 15px;
+
 }
 
 .gallery-arrow-right {
+
     right: 15px;
+
 }
 
 
+
 /* =================================
+
    BOLLETJES
-================================= */
+
+\================================= */
 
 .gallery-dots {
+
     display: flex;
 
     justify-content: center;
@@ -706,15 +929,19 @@ nav > a:hover {
     gap: 9px;
 
     margin-top: 20px;
+
 }
 
 .gallery-dot {
+
     width: 6px;
+
     height: 6px;
 
     padding: 0;
 
     border:
+
         1px solid #555;
 
     border-radius: 50%;
@@ -726,32 +953,47 @@ nav > a:hover {
     appearance: none;
 
     transition:
-        background 0.3s ease,
+
+background 0.3s ease,
+
         border-color 0.3s ease,
+
         transform 0.3s ease;
+
 }
 
 .gallery-dot.active {
+
     background: #ffd400;
 
     border-color: #ffd400;
 
     transform:
+
         scale(1.4);
+
 }
+
 
 
 /* =================================
+
    PRODUCT INFO
-================================= */
+
+\================================= */
 
 .product-detail-info {
+
     padding:
+
         20px 0;
+
 }
 
 .product-detail-info h1 {
+
     font-size:
+
         clamp(32px, 4vw, 52px);
 
     font-weight: 300;
@@ -759,9 +1001,11 @@ nav > a:hover {
     letter-spacing: -1px;
 
     margin-bottom: 15px;
+
 }
 
 .detail-price {
+
     color: #ffd400;
 
     font-size: 22px;
@@ -769,9 +1013,11 @@ nav > a:hover {
     font-weight: 500;
 
     margin-bottom: 28px;
+
 }
 
 .product-detail-info p {
+
     color: #888;
 
     font-size: 14px;
@@ -779,33 +1025,45 @@ nav > a:hover {
     line-height: 1.9;
 
     max-width: 440px;
+
 }
 
 
+
 /* =================================
+
    INFO PAGINA
-================================= */
+
+\================================= */
 
 .info-page {
+
     max-width: 1200px;
 
     margin: 0 auto;
 
     padding:
+
         45px 32px 120px;
+
 }
 
 .info-hero {
+
     max-width: 800px;
 
     margin:
+
         70px auto 100px;
 
     text-align: center;
+
 }
 
 .info-hero h1 {
+
     font-size:
+
         clamp(40px, 6vw, 70px);
 
     font-weight: 300;
@@ -815,9 +1073,11 @@ nav > a:hover {
     line-height: 1.05;
 
     margin-bottom: 30px;
+
 }
 
 .info-hero p {
+
     color: #888;
 
     max-width: 650px;
@@ -827,39 +1087,53 @@ nav > a:hover {
     font-size: 15px;
 
     line-height: 1.9;
+
 }
 
 
+
 /* =================================
+
    INFO KAARTEN
-================================= */
+
+\================================= */
 
 .info-grid {
+
     display: grid;
 
     grid-template-columns:
+
         repeat(2, 1fr);
 
     gap: 1px;
 
     background:
+
         rgba(255, 255, 255, 0.08);
 
     border:
+
         1px solid
+
         rgba(255, 255, 255, 0.08);
+
 }
 
 .info-card {
+
     min-height: 300px;
 
     padding:
+
         45px;
 
     background: #080808;
+
 }
 
 .info-number {
+
     display: block;
 
     color: #ffd400;
@@ -869,17 +1143,21 @@ nav > a:hover {
     letter-spacing: 3px;
 
     margin-bottom: 45px;
+
 }
 
 .info-card h2 {
+
     font-size: 22px;
 
     font-weight: 400;
 
     margin-bottom: 18px;
+
 }
 
 .info-card p {
+
     color: #777;
 
     font-size: 13px;
@@ -887,19 +1165,25 @@ nav > a:hover {
     line-height: 1.9;
 
     max-width: 450px;
+
 }
 
 .info-statement {
+
     text-align: center;
 
     max-width: 850px;
 
     margin:
+
         120px auto 0;
+
 }
 
 .info-statement h2 {
+
     font-size:
+
         clamp(26px, 4vw, 45px);
 
     line-height: 1.3;
@@ -907,121 +1191,171 @@ nav > a:hover {
     font-weight: 300;
 
     letter-spacing: -1px;
+
 }
 
 
+
 /* =================================
+
    MOBIEL
-================================= */
+
+\================================= */
 
 @media (max-width: 700px) {
 
     .site-header {
+
         padding:
+
             20px 15px;
+
     }
 
     .nav {
+
         gap: 20px;
+
     }
 
     nav {
+
         gap: 17px;
+
     }
 
     nav > a {
+
         font-size: 9px;
 
         letter-spacing: 1.5px;
+
     }
 
     .logo {
+
         font-size: 18px;
+
     }
+
 
 
     /* SHOWROOM */
 
     .products {
+
         padding:
+
             50px 12px 80px;
 
         gap: 55px;
+
     }
 
     .showroom-intro {
+
         margin-bottom: 0;
+
     }
 
     .showroom-intro h1 {
+
         font-size: 45px;
+
     }
+
 
 
     /* PRODUCT RIJ */
 
     .product-row {
+
         grid-template-columns:
+
             0.7fr
+
             1.5fr
+
             1.5fr
+
             0.7fr;
 
         gap: 7px;
+
     }
 
     .product-text {
+
         padding: 5px;
+
     }
 
     .product-number {
+
         font-size: 7px;
 
         margin-bottom: 8px;
+
     }
 
     .product-text h2 {
+
         font-size: 11px;
 
         letter-spacing: 0.4px;
 
         margin-bottom: 5px;
+
     }
 
     .product-text .price {
+
         font-size: 11px;
+
     }
 
     .product-text p {
+
         font-size: 8px;
 
         line-height: 1.3;
 
         margin-top: 5px;
+
     }
 
     .product-image::before {
+
         inset: 5px;
+
     }
+
 
 
     /* TAALMENU */
 
     .language-menu {
+
         right: -5px;
 
         width: 180px;
+
     }
+
 
 
     /* PRODUCT PAGINA */
 
     .product-page {
+
         padding:
+
             25px 12px 70px;
+
     }
 
     .product-detail {
+
         display: flex;
 
         flex-direction: column;
@@ -1031,85 +1365,268 @@ nav > a:hover {
         align-items: stretch;
 
         margin-top: 30px;
+
     }
 
     .gallery-window {
+
         aspect-ratio: 1 / 1;
+
     }
 
     .gallery-arrow {
+
         width: 42px;
+
         height: 42px;
 
         font-size: 29px;
 
         opacity: 0.55;
+
     }
 
     .gallery-arrow-left {
+
         left: 8px;
+
     }
 
     .gallery-arrow-right {
+
         right: 8px;
+
     }
 
     .gallery-dots {
+
         margin-top: 14px;
+
     }
 
     .product-detail-info {
+
         padding:
+
             0 5px;
+
     }
 
     .product-detail-info h1 {
+
         font-size: 30px;
+
     }
 
     .detail-price {
+
         font-size: 20px;
+
     }
+
 
 
     /* INFO */
 
     .info-page {
+
         padding:
+
             25px 15px 70px;
+
     }
 
     .info-hero {
+
         margin:
+
             60px auto 60px;
+
     }
 
     .info-hero h1 {
+
         font-size: 42px;
+
     }
 
     .info-hero p {
+
         font-size: 13px;
+
     }
 
     .info-grid {
+
         grid-template-columns:
+
             1fr;
+
     }
 
     .info-card {
+
         min-height: auto;
 
         padding:
+
             35px 25px;
+
     }
 
     .info-number {
+
         margin-bottom: 30px;
+
     }
 
     .info-statement {
+
         margin-top: 75px;
+
     }
 
+}
+
+dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op desktop. maar mobiel moet prioriteit hebben. op mobiel gebeurt er niets als ik er op druk. geen dropdown. en geen gele rand om de vlag zoals op desktop. de pijltjes bij de productfotos morgen in plaats van vierkanten er om heen, rondjes er om heen. ik heb het over die knoppen.
+
+/* =================================
+   MOBILE-FIRST INTERACTION FIXES
+   ================================= */
+
+/* Touch targets and stable stacking */
+.language-button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 110;
+}
+
+.language-button.open {
+    border-color: #ffd400;
+    background: rgba(255, 212, 0, 0.08);
+}
+
+.language-menu {
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.language-menu.open {
+    pointer-events: auto;
+}
+
+.language-menu button {
+    min-height: 38px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Circular gallery controls */
+.gallery-arrow {
+    border-radius: 50%;
+    padding: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+@media (max-width: 700px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .site-header {
+        position: relative;
+        z-index: 1000;
+        padding: 18px 14px;
+    }
+
+    .nav {
+        width: 100%;
+        min-width: 0;
+        gap: 14px;
+    }
+
+    nav {
+        gap: 12px;
+        min-width: 0;
+    }
+
+    nav > a {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .language {
+        flex: 0 0 auto;
+        z-index: 1200;
+    }
+
+    .language-button {
+        width: 44px;
+        height: 34px;
+        min-width: 44px;
+        min-height: 34px;
+        border: 1px solid #ffd400;
+        background: rgba(255, 212, 0, 0.06);
+    }
+
+    .language-menu {
+        top: calc(100% + 10px);
+        right: 0;
+        width: min(190px, calc(100vw - 28px));
+        max-height: min(65vh, 430px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    .language-menu button {
+        min-height: 42px;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .gallery-arrow {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav > a {
+        font-size: 7.5px;
+        letter-spacing: 1px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .language-button {
+        width: 42px;
+        min-width: 42px;
+    }
 }

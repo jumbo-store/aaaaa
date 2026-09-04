@@ -805,68 +805,78 @@ function setLanguage(language) {
    ========================= */
 
 const languageButton =
-    document.getElementById(
-        "languageButton"
-    );
+    document.getElementById("languageButton");
 
 const languageMenu =
-    document.getElementById(
-        "languageMenu"
-    );
+    document.getElementById("languageMenu");
 
+if (languageButton && languageMenu) {
 
-if (
-    languageButton &&
-    languageMenu
-) {
+    function setLanguageMenuOpen(open) {
+        languageMenu.classList.toggle("open", open);
+        languageButton.classList.toggle("open", open);
+        languageButton.setAttribute("aria-expanded", String(open));
+    }
+
+    function toggleLanguageMenu(event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        const isOpen =
+            languageMenu.classList.contains("open");
+
+        setLanguageMenuOpen(!isOpen);
+    }
 
     languageButton.addEventListener(
         "click",
+        toggleLanguageMenu,
+        { passive: false }
+    );
+
+    languageButton.addEventListener(
+        "keydown",
         function(event) {
+            if (event.key === "Enter" || event.key === " ") {
+                toggleLanguageMenu(event);
+            }
 
-            event.stopPropagation();
-
-            languageMenu.classList.toggle(
-                "open"
-            );
-
+            if (event.key === "Escape") {
+                setLanguageMenuOpen(false);
+            }
         }
     );
 
-
     languageMenu
-        .querySelectorAll(
-            "[data-language]"
-        )
+        .querySelectorAll("[data-language]")
         .forEach(function(button) {
 
             button.addEventListener(
                 "click",
-                function() {
+                function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
 
                     const language =
                         button.dataset.language;
 
                     setLanguage(language);
-
-                    languageMenu.classList.remove(
-                        "open"
-                    );
-
+                    setLanguageMenuOpen(false);
                 }
             );
-
         });
-
 
     document.addEventListener(
         "click",
-        function() {
-
-            languageMenu.classList.remove(
-                "open"
-            );
-
+        function(event) {
+            if (
+                !languageMenu.contains(event.target) &&
+                !languageButton.contains(event.target)
+            ) {
+                setLanguageMenuOpen(false);
+            }
         }
     );
 
