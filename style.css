@@ -85,17 +85,28 @@ body {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 
     color: #ffd400;
-
-    font-size: 20px;
-
-    font-weight: 700;
-
-    letter-spacing: 4px;
-
     text-decoration: none;
 
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.logo img {
+    width: 34px;
+    height: 34px;
+
+    display: block;
+    object-fit: contain;
+}
+
+.logo span {
+    display: block;
 }
 
 nav {
@@ -1748,4 +1759,14 @@ dit ziet er tot nu toe het beste uit. de dropdown menu voor taal werkt goed op d
         font-size: 30px;
         transform: translateY(-1px);
     }
+}
+.logo {
+    gap: 8px;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
 }
