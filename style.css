@@ -84,6 +84,10 @@ body {
 
 }
 
+nav > a {
+    margin-right: 30px;
+}
+
 .logo {
     display: inline-flex;
     align-items: center;
