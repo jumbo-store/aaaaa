@@ -678,3 +678,24 @@ const products = [
     }
 
 ];
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll("[data-product-image]").forEach(element => {
+
+        const productId = Number(element.dataset.productImage);
+        const product = products.find(p => p.id === productId);
+
+        if (!product || !product.images || !product.images.length) {
+            return;
+        }
+
+        const image = document.createElement("img");
+
+        image.src = product.images[0];
+        image.alt = product.name;
+        image.loading = "lazy";
+
+        element.appendChild(image);
+    });
+
+});
